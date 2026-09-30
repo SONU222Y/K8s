@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: study-planner
+  labels:
+    app.kubernetes.io/name: study-planner
+    app.kubernetes.io/instance: study-planner
+    app.kubernetes.io/component: web
+    app.kubernetes.io/part-of: study-planner
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: study-planner
+    app.kubernetes.io/instance: study-planner
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP

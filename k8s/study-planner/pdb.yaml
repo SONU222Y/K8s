@@ -1,0 +1,14 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: study-planner
+  labels:
+    app.kubernetes.io/name: study-planner
+    app.kubernetes.io/instance: study-planner
+    app.kubernetes.io/part-of: study-planner
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: study-planner
+      app.kubernetes.io/instance: study-planner
