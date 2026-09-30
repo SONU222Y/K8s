@@ -32,13 +32,14 @@ export function buildPlan(input: PlanInput): StudyPlan {
   const warnings: string[] = [];
   const done = new Set(input.completedIds ?? []);
   const topics = input.topics.filter((t) => !done.has(t.id));
-  const hoursPerDay = input.hoursPerDay;
+  // Time is packed in 0.5h blocks, so 1.25h per day really means 1h.
+  const hoursPerDay = Math.floor(input.hoursPerDay / STEP + EPS) * STEP;
   const totalDays = daysBetween(input.startDate, input.examDate);
 
   if (!(hoursPerDay > 0)) {
-    return { days: [], overflowHours: 0, warnings: ["Hours per day must be more than 0."] };
+    return { days: [], overflowHours: 0, warnings: [`Hours per day must be at least ${STEP}.`] };
   }
-  if (totalDays <= 0) {
+  if (!Number.isFinite(totalDays) || totalDays <= 0) {
     return {
       days: [],
       overflowHours: topics.reduce((sum, t) => sum + t.hours, 0),
@@ -66,7 +67,7 @@ export function buildPlan(input: PlanInput): StudyPlan {
   let learnHours = topics.map((t) => t.hours);
   if (needed > capacity + EPS) {
     const scale = capacity / needed;
-    learnHours = topics.map((t) => Math.max(STEP, roundToStep(t.hours * scale)));
+    learnHours = scaleToFit(learnHours, scale, capacity);
     warnings.push(
       `The syllabus needs about ${roundToStep(needed)} hours but only ${capacity} are available, ` +
         `so each topic gets about ${Math.round(scale * 100)}% of its estimated time. ` +
@@ -81,6 +82,28 @@ export function buildPlan(input: PlanInput): StudyPlan {
   packRevision(days.slice(learnDays), topics, hoursPerDay);
 
   return { days, overflowHours, warnings };
+}
+
+/**
+ * Scales hours down to whole 0.5h blocks without going over capacity: round every
+ * topic down first, then hand the spare blocks to the topics that lost the most.
+ * Each topic keeps at least one block, so the total can only exceed capacity when
+ * even that minimum does not fit.
+ */
+function scaleToFit(hours: number[], scale: number, capacity: number): number[] {
+  const exact = hours.map((h) => h * scale);
+  const result = exact.map((h) => Math.max(STEP, Math.floor(h / STEP + EPS) * STEP));
+  let spare = capacity - result.reduce((sum, h) => sum + h, 0);
+  const byLoss = exact
+    .map((h, i) => ({ i, loss: h - result[i] }))
+    .filter((x) => x.loss > EPS)
+    .sort((a, b) => b.loss - a.loss);
+  for (const { i } of byLoss) {
+    if (spare < STEP - EPS) break;
+    result[i] += STEP;
+    spare -= STEP;
+  }
+  return result;
 }
 
 /** Fills days in syllabus order, splitting a topic across days when needed. Returns hours left over. */
