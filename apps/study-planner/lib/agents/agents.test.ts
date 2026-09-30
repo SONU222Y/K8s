@@ -38,6 +38,21 @@ describe("parseOffline", () => {
     expect(units[0].topics).toContain("Partial fractions");
   });
 
+  it("skips the course title above the first unit", () => {
+    const { units } = parseOffline("BIOL 101 - Biology\nFinal exam syllabus\n\nUnit 1: Cells\n- Cell theory");
+    expect(units).toEqual([{ name: "Unit 1: Cells", topics: ["Cell theory"] }]);
+  });
+
+  it("keeps a bullet with sub-points as one topic", () => {
+    const { units } = parseOffline("Unit 1\n- Transport (diffusion, osmosis, active transport)\n- Krebs cycle, electron transport chain");
+    expect(units[0].topics).toEqual(["Transport (diffusion, osmosis, active transport)", "Krebs cycle, electron transport chain"]);
+  });
+
+  it("does not split plain-line lists inside brackets", () => {
+    const { units } = parseOffline("Algebra (groups, rings), Geometry");
+    expect(units[0].topics).toEqual(["Algebra (groups, rings)", "Geometry"]);
+  });
+
   it("uses a General unit when there are no headings", () => {
     const { units } = parseOffline("- Algebra\n- Geometry");
     expect(units).toEqual([{ name: "General", topics: ["Algebra", "Geometry"] }]);

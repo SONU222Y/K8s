@@ -18,12 +18,18 @@ export function parseOffline(syllabus: string): ParsedSyllabus {
     return current;
   };
 
-  for (const rawLine of syllabus.split(/\r?\n/)) {
+  const lines = syllabus.split(/\r?\n/);
+  const isHeading = (raw: string) =>
+    !BULLET.test(raw) && (HEADING.test(raw.trim()) || raw.trim().endsWith(":"));
+  const hasHeadings = lines.some(isHeading);
+
+  for (const rawLine of lines) {
     const line = rawLine.trim();
     if (!line) continue;
+    const isBullet = BULLET.test(rawLine);
 
     const heading = line.match(HEADING);
-    if (heading && !BULLET.test(rawLine)) {
+    if (heading && !isBullet) {
       // "Unit 2: Cells, Tissues; Organs" → unit "Unit 2" with the listed topics.
       // "Unit 1: Introduction to Biology" stays a unit name; its topics follow below.
       const text = (heading[1] ?? heading[2]).trim();
@@ -35,14 +41,19 @@ export function parseOffline(syllabus: string): ParsedSyllabus {
       }
       continue;
     }
-    if (line.endsWith(":") && !BULLET.test(rawLine)) {
+    if (line.endsWith(":") && !isBullet) {
       startUnit(line.slice(0, -1).trim());
       continue;
     }
 
+    // Plain lines above the first unit are usually the course title, not topics.
+    if (!current && hasHeadings && !isBullet) continue;
+
     const topicText = line.replace(BULLET, "").trim();
     if (!topicText) continue;
-    (current ?? startUnit("General")).topics.push(...splitTopics(topicText));
+    // A bullet is one topic, even if it lists sub-points. A plain line may be a list.
+    const topics = isBullet ? [topicText.replace(/[.]+$/, "")] : splitTopics(topicText);
+    (current ?? startUnit("General")).topics.push(...topics);
   }
 
   return { units: units.filter((u) => u.topics.length > 0) };
@@ -54,10 +65,10 @@ function splitOnce(text: string, separator: RegExp): [string, string | undefined
   return [text.slice(0, match.index), text.slice(match.index + match[0].length)];
 }
 
-/** Splits "A, B; C" into separate topics. */
+/** Splits "A, B; C" into separate topics, ignoring commas inside brackets. */
 function splitTopics(text: string): string[] {
   return text
-    .split(/\s*[;,]\s*/)
+    .split(/\s*[;,]\s*(?![^()]*\))/)
     .map((t) => t.replace(/[.]+$/, "").trim())
     .filter((t) => t.length > 1);
 }
