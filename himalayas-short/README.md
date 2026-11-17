@@ -57,6 +57,22 @@ himalayas-short/
         └── Scene5Everest.tsx
 ```
 
+## Just want to watch it?
+
+The finished video is already in the repo: **`renders/himalayas-short.mp4`** (1080×1920, 45 s, 30 fps, H.264 + AAC, narration and music included).
+
+On WSL:
+
+```bash
+explorer.exe renders
+```
+
+On Linux desktop:
+
+```bash
+mpv renders/himalayas-short.mp4
+```
+
 ## Install
 
 Requires **Node.js 20.19+ or 22.13+** (`node -v`).
