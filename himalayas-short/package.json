@@ -1,0 +1,48 @@
+{
+  "name": "himalayas-short",
+  "version": "1.0.0",
+  "description": "\"How Were the Himalayas Born?\" - 45s vertical documentary Short (Remotion + React Three Fiber)",
+  "repository": {},
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/captions": "4.0.544",
+    "@remotion/cli": "4.0.544",
+    "@remotion/fonts": "4.0.544",
+    "@remotion/install-whisper-cpp": "4.0.544",
+    "@remotion/media": "4.0.544",
+    "@remotion/three": "4.0.544",
+    "@remotion/transitions": "4.0.544",
+    "@types/three": "^0.178.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.544",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.544",
+    "@types/react": "19.3.0",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render HimalayasShort out/himalayas-short.mp4 --codec=h264 --crf=18",
+    "render:draft": "remotion render HimalayasShort out/himalayas-short-draft.mp4 --scale=0.5",
+    "render:cpu": "remotion render HimalayasShort out/himalayas-short.mp4 --codec=h264 --crf=18 --gl=swangle",
+    "thumbnail": "remotion still HimalayasShort out/thumbnail.png --frame=1300",
+    "captions": "node scripts/transcribe.mjs",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}
