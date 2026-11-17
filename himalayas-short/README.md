@@ -10,7 +10,7 @@ A 45-second, 1080×1920, 30 fps vertical documentary built with **Remotion 4 + R
 | 22–33 s | **4 · Formation**: time-lapse of the range rising | Same terrain shader with animated uplift and snow line, racing sun, fast clouds, elevation gauge |
 | 33–45 s | **5 · Everest**: golden-hour orbit and "still growing" | Summit auto-located from the heightfield, 3D-projected pin label, fossil card (Meshy-ready), stats, finale |
 
-Captions are animated word by word and synced to the narration. Music is auto-ducked under the voice. SFX hooks are wired in.
+Narration (deep male voice) and an orchestral music bed are included and mixed. Captions are animated word by word and synced to the narration. SFX hooks are wired in, but no SFX files are included.
 
 ## Project structure
 
@@ -25,7 +25,7 @@ himalayas-short/
 │   └── transcribe.mjs           ← Whisper → public/captions.json (exact word timings)
 ├── public/
 │   ├── fonts/                   ← Cinzel, Inter, Montserrat (OFL, self-hosted)
-│   ├── audio/                   ← narration.mp3, music.mp3   (you add)
+│   ├── audio/                   ← narration.mp3, music.mp3   (included)
 │   │   └── sfx/                 ← whoosh, wind, rumble, impact, riser (you add)
 │   └── models/                  ← trilobite.glb, everest.glb (optional, Meshy)
 └── src/
@@ -119,11 +119,13 @@ On WSL (opens the folder in Windows Explorer; double-click the MP4):
 explorer.exe out
 ```
 
-## Add the voice, music and captions
+## Voice, music and captions
 
-1. Record or generate the voiceover from `NARRATION_SCRIPT.md` and save it as `public/audio/narration.mp3`.
-2. Add a music bed at `public/audio/music.mp3` (and optional SFX; see `ASSETS.md`).
-3. Sync the captions to your actual take:
+**Included:** `public/audio/narration.mp3` (deep male narrator) and `public/audio/music.mp3` (orchestral bed, auto-ducked under the voice). Captions are already synced to this narration.
+
+**Not included:** sound effects. See `ASSETS.md` §2 for the cue sheet and file names.
+
+To swap in your own voiceover, overwrite `public/audio/narration.mp3`, then re-sync the captions:
 
 ```bash
 npm run captions
@@ -145,6 +147,6 @@ Restart `npm run dev` after adding files to `public/` so Studio sees them.
 | Requested | Reality | What this project does |
 |-----------|---------|------------------------|
 | "Ultra-realistic" 3D | Remotion renders WebGL in a browser. You get real-time-game quality, not offline path-traced film CGI (Houdini, Unreal, etc.). | A custom terrain shader with aerial perspective, snow-on-slope logic, AO and a sun-glow sky gets as close as a browser can. For true photoreal, swap Scenes 1 and 5 for licensed drone footage via `<Video>` from `@remotion/media`. |
-| Narrator voice and music | Code can't produce a human voice or licensed music. | Timestamped script + automatic integration + ducking + Whisper caption sync. |
+| Narrator voice and music | Code can't produce a human voice or licensed music. | AI-generated narration (ElevenLabs "Brian" via vidIQ) and AI orchestral music are included. The script is timestamped so a human narrator can replace it. |
 | Meshy assets everywhere | Meshy makes object-scale models, not flyable landscapes. | The terrain is procedural. Meshy is used for the fossil and an optional Everest hero model (`ASSETS.md`). |
 | Scientifically accurate cross-section | Any diagram must exaggerate vertical scale. | The process order and mechanics are right (subduction → collision → underthrusting → crustal thickening → slab break-off). The scale is schematic. |

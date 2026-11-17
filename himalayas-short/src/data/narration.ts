@@ -2,7 +2,8 @@ import type { Caption } from "@remotion/captions";
 
 /**
  * Narration script, timed to the 45-second storyboard.
- * Times are absolute (from the start of the video), in milliseconds.
+ * Times are absolute (from the start of the video), in milliseconds, and
+ * match where each line sits in public/audio/narration.mp3.
  *
  * This file drives BOTH the on-screen captions and the music ducking.
  * After you record the voiceover, either
@@ -21,54 +22,54 @@ export const NARRATION: NarrationLine[] = [
   {
     scene: 1,
     startMs: 400,
-    endMs: 4600,
+    endMs: 4180,
     text: "What if I told you that the world's highest mountains were once under an ocean?",
   },
-  { scene: 2, startMs: 5300, endMs: 7300, text: "Rewind seventy million years." },
+  { scene: 2, startMs: 4900, endMs: 7100, text: "Rewind seventy million years." },
   {
     scene: 2,
-    startMs: 7500,
-    endMs: 11600,
+    startMs: 7300,
+    endMs: 12210,
     text: "India was an island, racing north across the Tethys Ocean, toward Asia.",
   },
-  { scene: 3, startMs: 12300, endMs: 13900, text: "Then came the collision." },
+  { scene: 3, startMs: 12450, endMs: 14210, text: "Then came the collision." },
   {
     scene: 3,
-    startMs: 14100,
-    endMs: 17600,
+    startMs: 14410,
+    endMs: 18560,
     text: "The ocean floor slid beneath Asia, until India itself crashed in.",
   },
   {
     scene: 3,
-    startMs: 17800,
-    endMs: 21600,
+    startMs: 18760,
+    endMs: 21930,
     text: "The old seabed was crumpled, and lifted toward the sky.",
   },
   {
     scene: 4,
     startMs: 22400,
-    endMs: 26200,
+    endMs: 25210,
     text: "Over millions of years, the crust doubled in thickness.",
   },
   {
     scene: 4,
-    startMs: 26400,
-    endMs: 32400,
+    startMs: 25500,
+    endMs: 30410,
     text: "Peaks rose higher and higher, until snow and ice claimed the roof of the world.",
   },
   {
     scene: 5,
     startMs: 33300,
-    endMs: 37600,
+    endMs: 37740,
     text: "Today, fossils of sea creatures lie near the summit of Mount Everest.",
   },
   {
     scene: 5,
-    startMs: 37900,
-    endMs: 41300,
+    startMs: 38000,
+    endMs: 40950,
     text: "And even today, the Himalayas continue to rise.",
   },
-  { scene: 5, startMs: 41500, endMs: 44300, text: "The mountains are still growing!" },
+  { scene: 5, startMs: 41600, endMs: 43140, text: "The mountains are still growing!" },
 ];
 
 /**

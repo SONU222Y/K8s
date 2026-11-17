@@ -15,9 +15,9 @@ const SFX_CUES: { file: string; atSec: number; volume: number; name: string }[] 
     volume: 0.55,
   })),
   { name: "Tectonic rumble", file: ASSETS.sfx.rumble, atSec: 13.5, volume: 0.8 },
-  { name: "Collision impact", file: ASSETS.sfx.impact, atSec: 16.7, volume: 0.9 },
+  { name: "Collision impact", file: ASSETS.sfx.impact, atSec: 17.65, volume: 0.9 },
   { name: "Uplift riser", file: ASSETS.sfx.riser, atSec: 29.5, volume: 0.6 },
-  { name: "Finale impact", file: ASSETS.sfx.impact, atSec: 41.4, volume: 0.7 },
+  { name: "Finale impact", file: ASSETS.sfx.impact, atSec: 41.5, volume: 0.7 },
 ];
 
 /**

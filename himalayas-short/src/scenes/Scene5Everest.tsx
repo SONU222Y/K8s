@@ -29,10 +29,10 @@ const PUFF_AREA = { x: [-3400, 3400] as [number, number], y: [180, 420] as [numb
 /** Narration-synced beats (absolute seconds -> scene-local frames). */
 const BEATS = {
   fossilIn: localFrame("Scene5-Everest", 33.3),
-  fossilOut: localFrame("Scene5-Everest", 37.5),
+  fossilOut: localFrame("Scene5-Everest", 37.8),
   pinIn: localFrame("Scene5-Everest", 33.6),
-  statsIn: localFrame("Scene5-Everest", 37.9),
-  finaleIn: localFrame("Scene5-Everest", 41.3),
+  statsIn: localFrame("Scene5-Everest", 38.0),
+  finaleIn: localFrame("Scene5-Everest", 41.5),
 };
 
 const useSummit = () =>

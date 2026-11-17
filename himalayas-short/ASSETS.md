@@ -1,21 +1,21 @@
 # External assets
 
-The project renders a **complete, silent video with no external assets**. Every visual is generated in code: the procedural terrain, the paleo-globe, the cross-section, the clouds and the fossil. Fonts are already bundled in `public/fonts/`.
+The project renders without any optional assets. Every visual is generated in code: the procedural terrain, the paleo-globe, the cross-section, the clouds and the fossil. Fonts are already bundled in `public/fonts/`.
 
 Drop the files below into `public/` using the exact paths shown and they are picked up automatically (`src/config/assets.ts`). You don't need to change any code. A file that's missing is simply skipped.
 
-## 1. Required for a publishable Short
+## 1. Narration and music: included
 
-| Path | What | Spec | Where to get it |
-|------|------|------|-----------------|
-| `public/audio/narration.mp3` | Voiceover, one continuous take, starting at 0 s | 44.1/48 kHz, mono or stereo, ≤ 45 s, peak −1 dBFS, around −16 LUFS | Voice actor or TTS (ElevenLabs, vidIQ voiceover, etc.) reading `NARRATION_SCRIPT.md`. Use a "deep male documentary" voice. |
-| `public/audio/music.mp3` | Cinematic orchestral bed | ≥ 45 s (it loops if shorter), no vocals | A royalty-free library such as YouTube Audio Library, Artlist, Epidemic or Pixabay Music. Search "epic cinematic documentary", "orchestral build", around 80–100 BPM. The volume is auto-ducked under the narration. |
+| Path | What | Source |
+|------|------|--------|
+| `public/audio/narration.mp3` | 45 s voiceover, deep male narrator (11 lines placed on the storyboard, −16 LUFS) | Generated with the vidIQ voiceover tool, voice "Brian – Deep, Resonant and Comforting" (ElevenLabs). See `NARRATION_SCRIPT.md`. |
+| `public/audio/music.mp3` | 46 s cinematic orchestral bed (strings, brass, taiko, swell) | Generated with vidIQ AI music (described by vidIQ as original and royalty-free). Auto-ducked under the voice in code. |
 
-After recording the VO, sync the captions in one of two ways:
-- **Quick:** nudge `startMs` / `endMs` in `src/data/narration.ts` to match your take.
-- **Exact:** run `npm run captions`. Whisper writes `public/captions.json` with word-level timings, which then overrides the script timings automatically.
+To replace either, overwrite the file with the same name. If your new voiceover has different timing, either edit `startMs` / `endMs` in `src/data/narration.ts` or run `npm run captions` (Whisper writes `public/captions.json`, which overrides the script timings automatically).
 
-## 2. Sound effects (optional, recommended)
+## 2. Sound effects: NOT included (optional, recommended)
+
+No SFX files ship with the project, so the rendered MP4 has narration and music but no whooshes, rumbles or impacts. Add any of these and re-render:
 
 | Path | Cue (absolute time) | Search terms |
 |------|---------------------|--------------|
@@ -23,7 +23,7 @@ After recording the VO, sync the captions in one of two ways:
 | `public/audio/sfx/wind-loop.mp3` | 0–5.5 s and 33–45 s (looped) | "high altitude wind loop", "mountain wind ambience" |
 | `public/audio/sfx/whoosh.mp3` | 4.65 s, 11.65 s, 21.65 s, 32.65 s (each scene cut) | "transition whoosh", "swoosh" |
 | `public/audio/sfx/tectonic-rumble.mp3` | 13.5 s | "earthquake rumble", "low frequency rumble" |
-| `public/audio/sfx/deep-impact.mp3` | 16.7 s (collision) and 41.4 s (finale) | "cinematic boom", "trailer hit", "sub drop" |
+| `public/audio/sfx/deep-impact.mp3` | 17.65 s (collision) and 41.5 s (finale) | "cinematic boom", "trailer hit", "sub drop" |
 | `public/audio/sfx/riser.mp3` | 29.5 s | "cinematic riser 3 seconds" |
 
 Cue times live in `SFX_CUES` in `src/components/AudioLayer.tsx`.

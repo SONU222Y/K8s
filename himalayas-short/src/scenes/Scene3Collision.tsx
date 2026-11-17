@@ -16,12 +16,12 @@ import {
 /** Scene-local keyframes (frames). Retime the geology here. */
 const K = {
   subductStart: 10,
-  collision: 150, // continental margin reaches the trench
-  pushEnd: 296,
-  upliftStart: 160,
-  upliftEnd: 300,
-  breakoffStart: 215,
-  breakoffEnd: 300,
+  collision: 178, // continental margin reaches the trench, on "...crashed in" (≈17.7 s)
+  pushEnd: 300,
+  upliftStart: 188,
+  upliftEnd: 308,
+  breakoffStart: 232,
+  breakoffEnd: 308,
 };
 
 const S_COLLISION = uTrench - (GEO.mC + GEO.margin); // India's travel at first contact
