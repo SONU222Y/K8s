@@ -79,19 +79,19 @@ This opens Remotion Studio (default http://localhost:3000). Pick **HimalayasShor
 
 ## Render the final MP4
 
-On a machine with a GPU (Mac, Windows, or Linux desktop):
-
 ```bash
 npm run render
 ```
 
-The output is `out/himalayas-short.mp4` (H.264, CRF 18), ready to upload as a Short.
+The output is `out/himalayas-short.mp4` (1080×1920, H.264, CRF 18). This uses software WebGL ("swangle"), which works on any machine, including WSL and servers with no GPU. On a 4-core CPU it takes roughly 30–60 minutes.
 
-On a server or VM **without** a GPU (software WebGL; slower but identical output):
+If your machine has a working GPU for headless Chrome, this is much faster:
 
 ```bash
-npm run render:cpu
+npm run render:gpu
 ```
+
+> If `render:gpu` fails with `Error creating WebGL context`, your GPU isn't reachable from headless Chrome (common on WSL). Use `npm run render` instead.
 
 A fast half-resolution draft for review:
 
@@ -103,6 +103,20 @@ A thumbnail still:
 
 ```bash
 npm run thumbnail
+```
+
+### Play it
+
+On Linux desktop:
+
+```bash
+mpv out/himalayas-short.mp4
+```
+
+On WSL (opens the folder in Windows Explorer; double-click the MP4):
+
+```bash
+explorer.exe out
 ```
 
 ## Add the voice, music and captions

@@ -34,8 +34,8 @@
   "scripts": {
     "dev": "remotion studio",
     "render": "remotion render HimalayasShort out/himalayas-short.mp4 --codec=h264 --crf=18",
+    "render:gpu": "remotion render HimalayasShort out/himalayas-short.mp4 --codec=h264 --crf=18 --gl=angle",
     "render:draft": "remotion render HimalayasShort out/himalayas-short-draft.mp4 --scale=0.5",
-    "render:cpu": "remotion render HimalayasShort out/himalayas-short.mp4 --codec=h264 --crf=18 --gl=swangle",
     "thumbnail": "remotion still HimalayasShort out/thumbnail.png --frame=1300",
     "captions": "node scripts/transcribe.mjs",
     "build": "remotion bundle",
