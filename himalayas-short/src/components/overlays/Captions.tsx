@@ -116,11 +116,11 @@ export const Captions: React.FC = () => {
       {pages.map((page, index) => {
         const next = pages[index + 1] ?? null;
         const startFrame = Math.round((page.startMs / 1000) * fps);
+        // Hold each page until just after its last spoken word, never into
+        // the silent gaps between lines (or past the next page).
+        const lastWordEndMs = page.tokens[page.tokens.length - 1]?.toMs ?? page.startMs + page.durationMs;
         const endFrame = Math.round(
-          Math.min(
-            next ? (next.startMs / 1000) * fps : Infinity,
-            ((page.startMs + page.durationMs) / 1000) * fps + 8,
-          ),
+          Math.min(next ? (next.startMs / 1000) * fps : Infinity, ((lastWordEndMs + 350) / 1000) * fps),
         );
         const durationInFrames = endFrame - startFrame;
         if (durationInFrames <= 0) return null;

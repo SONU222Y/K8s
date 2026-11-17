@@ -25,7 +25,7 @@ export type TerrainOptions = {
 export const TERRAIN_FLYTHROUGH: TerrainOptions = {
   seed: 7,
   size: 6000,
-  segments: 420,
+  segments: 600,
   maxHeight: 900,
   valley: { amplitude: 420, wavelength: 3400, width: 170 },
 };
@@ -33,7 +33,7 @@ export const TERRAIN_FLYTHROUGH: TerrainOptions = {
 export const TERRAIN_EVEREST: TerrainOptions = {
   seed: 21,
   size: 6000,
-  segments: 440,
+  segments: 640,
   maxHeight: 820,
   everest: { x: 0, z: -300, height: 1.25, radius: 900 },
 };
@@ -60,7 +60,9 @@ export const createHeightField = (options: TerrainOptions): HeightField => {
   const heightAt = (x: number, z: number) => {
     const wx = fbm(n2, x * 0.0003, z * 0.0003, 3) * 0.8;
     const wz = fbm(n3, x * 0.0003 + 5.2, z * 0.0003 + 1.3, 3) * 0.8;
-    const r = ridged(n1, x * 0.00062 + wx, z * 0.00062 + wz, 6);
+    // 5 octaves: the finest ridge detail stays wider than ~7 grid cells, so
+    // crests don't alias into sawtooth edges.
+    const r = ridged(n1, x * 0.00062 + wx, z * 0.00062 + wz, 5);
     const massif = fbm(n4, x * 0.00032, z * 0.00032, 3) * 0.5 + 0.5;
     const rolling = fbm(n1, x * 0.0004 + 7.7, z * 0.0004 - 3.1, 4) * 0.5 + 0.5;
     let h = (0.72 * Math.pow(r, 1.35) + 0.28 * rolling * rolling) * (0.3 + 0.9 * massif);

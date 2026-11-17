@@ -63,14 +63,15 @@ export const Scene4Formation: React.FC = () => {
         <CameraRig shot={shot} />
         <Sky atmosphere={atmosphere} />
         <Terrain options={TERRAIN_EVEREST} atmosphere={atmosphere} uplift={uplift} snowLine={snowLine} />
-        <CloudLayer frame={frame} height={60 + 260 * uplift} opacity={0.32} drift={[9, 3]} tint="#f2f5fa" />
+        {/* Fog sheet thickens as the peaks rise, so the opening plain stays readable. */}
+        <CloudLayer frame={frame} height={60 + 260 * uplift} opacity={0.08 + 0.24 * uplift} drift={[9, 3]} tint="#f2f5fa" />
         <CloudPuffs
           frame={frame}
           area={PUFF_AREA}
           drift={16}
           count={30}
           seed={11}
-          opacity={0.8}
+          opacity={0.35 + 0.45 * uplift}
           tint={atmosphere.sunColor}
         />
       </ThreeCanvas>
