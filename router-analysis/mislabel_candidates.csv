@@ -1,0 +1,101 @@
+Excel Row,pickA,pickB,confB,reason,Query
+45,IMS,IMS,1.0,IMS/SIP subject -> IMS?,"For EPS or IMS authentication failures at the UDM boundary, inspect existing HSS GetHssAv request outcomes separately from AUSF Get outcomes without exposing authentication material."
+46,MCO,MCO,1.0,messaging (SMS/SMTP/MMS) -> MCO?,"For SMS-only subscription failures, compare existing UDM SMS subscription and SMS management dataset retrievals, including any combined multi-dataset request."
+481,MCO,MCO,1.0,messaging (SMS/SMTP/MMS) -> MCO?,"For SMS over NAS failure, do UE SMS-support indication, AMF SMS-allowed indication, subscription checking and SMSF selection agree?"
+539,PACO,PACO,0.99999,IMS/SIP subject -> IMS?,Do MME Sv Echo exchanges show an MSC path failure before the associated SRVCC or MSC-selection failure?
+553,IMS,IMS,1.0,IMS/SIP subject -> IMS?,"For a dropped IMS call during LTE-to-CS mobility, does the attempted SRVCC handover type match the documented MME Sv-supported scenarios?"
+571,PACO,PACO,1.0,IMS/SIP subject -> IMS?,"For unsuccessful MME P-CSCF restoration, what HSS-triggered restoration configuration and observed signaling show the point of failure?"
+590,MCO,MCO,0.99997,messaging (SMS/SMTP/MMS) -> MCO?,Could the documented NB-S1 UE capability prerequisites explain failure of SMS over MME SGs for a control-plane-only IoT device?
+608,PACO,PACO,1.0,messaging (SMS/SMTP/MMS) -> MCO?,"Is absent MME TRL evidence expected for SCEF, SGd SMS, location services or eNodeB setup/configuration because these are explicitly excluded?"
+902,IMS,IMS,0.74058,IMS/SIP subject -> IMS?,"Looking at ePDG Functional, what does EPDG_PDN_CONN_SETUP_PCSCF_OVERRIDE_ATTEMPTS show for the past 2 days?"
+903,IMS,PACO,0.77701,IMS/SIP subject -> IMS?,I'd like to check EPDG_PDN_CONN_SETUP_PCSCF_OVERRIDE_SUCCESS in ePDG Functional. Retrieve its readings for the last 2 days.
+944,PLATFORM,PLATFORM,0.51488,NFV infrastructure alarm/resource -> PLATFORM?,"For a virtual load-balancer fault, separate existing FE IP/L4 packet-processing evidence from RE application-routing, overload-control and security evidence; verify the deployed FE/RE placement first."
+1337,IMS,IMS,1.0,IMS/SIP subject -> IMS?,"How are partial IMS HSS service creation, Provisioning Gateway rollback and rollback failure reported in the asynchronous result and alarms?"
+1448,PLATFORM,PLATFORM,0.98946,NFV infrastructure alarm/resource -> PLATFORM?,How can NFV CRDL database-node failure be distinguished from failure of the CRDL administration monitor?
+1449,MCO,MCO,0.82138,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,"How can SCTP and M3UA association, transport and message results be used to investigate an applicable SS7 peer-VNF front-end peer?"
+1451,PACO,PACO,0.98171,NFV infrastructure alarm/resource -> PLATFORM?,How can graceful and forceful NFV component locks be distinguished from a spontaneous service failure?
+1453,PACO,PACO,0.99997,NFV infrastructure alarm/resource -> PLATFORM?,"How can reboot, administrative-lock, active/standby-switch and downtime measurements help interpret a NFV component-availability incident?"
+1454,PACO,PACO,0.99997,offline/online charging records -> MDE?,"Which peer-VNF CAS CDR, TRL, storage and interface-throughput definitions can be used for an applicable analytics deployment without inferring broader PACO applicability?"
+1455,IMS,PACO,0.98896,NFV infrastructure alarm/resource -> PLATFORM?,"Which NIC connectivity and NFV memory-fault conditions are documented, and what recovery events indicate restoration?"
+1456,PLATFORM,PLATFORM,0.96508,NFV infrastructure alarm/resource -> PLATFORM?,"Which Scylla, Grafana and Prometheus NFV process-state alarms are relevant only when those components are deployed?"
+1458,PACO,PACO,0.99991,NFV infrastructure alarm/resource -> PLATFORM?,"Which NFV alarm type, severity and event fields should be collected to classify an incident before assigning it to a deployed VNF?"
+1459,PACO,PACO,0.99958,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,"Which defined peer-VNF CAP and INAP send/receive triggers are available for SS7 peers, without assuming these interfaces are present in PACO?"
+1462,PLATFORM,PLATFORM,0.9931,NFV infrastructure alarm/resource -> PLATFORM?,How can a NFV database filesystem becoming read-only be distinguished from a Couchbase rebalance blocked by unreachable nodes?
+1463,IMS,MCO,0.99788,NFV infrastructure alarm/resource -> PLATFORM?,How can inode usage be investigated separately from free disk capacity for the database inode-threshold NFV alarm?
+1465,PACO,PACO,0.99999,NFV infrastructure alarm/resource -> PLATFORM?,How do minor disk-usage threshold events differ from the critical disk-full NFV alarm?
+1466,IMS,MDE,0.54172,NFV infrastructure alarm/resource -> PLATFORM?,How do the documented iostat and NFV process checks help investigate excessive disk I/O utilization?
+1467,PLATFORM,PLATFORM,1.0,NFV infrastructure alarm/resource -> PLATFORM?,How should platform NFV CPU-status and disk-status alarms be investigated separately from utilization threshold alarms?
+1468,PACO,PACO,0.9036,NFV infrastructure alarm/resource -> PLATFORM?,"What checks are documented for the NFV alarm EID_LOCAL_HOST_DB_DOWN, and why is its standby-DB-only scope important?"
+1469,PACO,PACO,1.0,NFV infrastructure alarm/resource -> PLATFORM?,"What does the NFV process-hung-thread event indicate, and what automatic process-manager recovery is documented?"
+1470,PLATFORM,PLATFORM,0.90994,NFV infrastructure alarm/resource -> PLATFORM?,What process-state check and recovery event are documented for a Cassandra process-down NFV alarm where Cassandra is deployed?
+1471,CMS,PACO,0.77045,NFV infrastructure alarm/resource -> PLATFORM?,"Which NFS mount state, NFV configuration and system-log checks are documented for redundancy-directory mount or unmount timeout?"
+1472,CMS,PACO,0.99731,NFV infrastructure alarm/resource -> PLATFORM?,Which NTP offset and configured threshold evidence should be compared when the database time-offset NFV alarm is active?
+1473,PACO,PACO,0.99997,NFV infrastructure alarm/resource -> PLATFORM?,Which NFV NTP status and network-connectivity checks are documented when system time is not synchronized?
+1474,PACO,PACO,0.83648,NFV infrastructure alarm/resource -> PLATFORM?,Which PCS-to-metadata-database connectivity evidence should be collected when the database-adapter metadata-cluster NFV alarm is active?
+1476,CMS,PACO,1.0,NFV infrastructure alarm/resource -> PLATFORM?,Which configured partition thresholds and disk-usage evidence should be checked for the NFV alarm EID_MAX_DISK_USAGE_EXCEEDED?
+1478,PACO,PACO,1.0,NFV infrastructure alarm/resource -> PLATFORM?,Which documented standby and active-side conditions help investigate an unexpected NFV protection-group takeover?
+1479,PACO,PLATFORM,0.95076,NFV infrastructure alarm/resource -> PLATFORM?,How are NFV platform alarms and events viewed and regenerated when checking monitoring visibility?
+1481,PACO,PACO,0.79573,NFV infrastructure alarm/resource -> PLATFORM?,"How can generated and cleared minor, major and critical NFV alarm counts be compared over the measured period?"
+1482,PACO,PACO,1.0,NFV infrastructure alarm/resource -> PLATFORM?,How do NFV CPU overload entry thresholds and below-abatement clear events describe resource pressure and recovery?
+1483,PACO,PACO,1.0,NFV infrastructure alarm/resource -> PLATFORM?,"How do minimum, average and maximum NFV disk utilization measurements differ from free-space measurements and what sampling interval is documented?"
+1484,PACO,PACO,1.0,NFV infrastructure alarm/resource -> PLATFORM?,"How do minimum, average, maximum and current NFV resource measurements differ, including their documented sampling intervals?"
+1485,PACO,PACO,1.0,NFV infrastructure alarm/resource -> PLATFORM?,How do upward/downward NFV card-overload transitions differ from the documented overload-level percentage measurements?
+1487,PACO,PACO,0.99755,NFV infrastructure alarm/resource -> PLATFORM?,"Which fast-path NFV CPU and memory utilization definitions are available, and which source inconsistencies need to be retained when interpreting them?"
+1495,PLATFORM,PLATFORM,1.0,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,"Could you check the recent peer-VNF platform CAP readings for CAP_CIR_INV_RCVD, covering the last 2 days?"
+1496,PLATFORM,PLATFORM,0.99993,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,How do the recorded values for received CAP Call Information Report Invoke received look over the last 2 days in peer-VNF platform CAP?
+1497,PACO,PLATFORM,1.0,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,"Bring up CAP_PA_INV_RCVD for peer-VNF platform CAP over the last 2 days, keeping the recorded timestamps."
+1498,PLATFORM,PLATFORM,1.0,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Show the readings related to received Play Announcement (PA) in peer-VNF platform CAP for the past 2 days.
+1499,MCO,MCO,0.99999,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Show the available CAP_RST_TMR_SMS_RCVD samples over the past 2 days from peer-VNF platform CAP.
+1500,MCO,MCO,1.0,messaging (SMS/SMTP/MMS) -> MCO?; SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I'm checking received Reset Timer for SMS (RST SMS). Bring up the related peer-VNF platform CAP measurements for the last 2 days.
+1501,MDE,MDE,0.99994,offline/online charging records -> MDE?,Get the last 2 days of reported AVG_CDR_FILE_SIZE values from peer-VNF platform CAS charging records.
+1502,MDE,MDE,0.99905,offline/online charging records -> MDE?,Could you look into the average size of a CDR file on the storage used by the VM. Unit: KB using the last 2 days of peer-VNF platform CAS charging records measurements?
+1504,MDE,PLATFORM,0.83791,offline/online charging records -> MDE?,Can you check the average incoming throughput on which the CDR records are received (via Kafka interface) in peer-VNF platform CAS platform over the last 2 days?
+1507,IMS,IMS,0.99998,IMS/SIP subject -> IMS?,I'd like to check DBAPG_ATT in peer-VNF platform CSCF database adapter. Retrieve its readings for the last 2 days.
+1508,IMS,IMS,0.60188,IMS/SIP subject -> IMS?,I'm checking current value of the sessdb sync/fetch attempt. Bring up the related peer-VNF platform CSCF database adapter measurements for the last 2 days.
+1517,IMS,IMS,1.0,offline/online charging records -> MDE?,Please look up NUM_CCA_RESP_RCVD_WITH_RC_9001 for the last 2 days in the peer-VNF platform DIAMRE RO INTERFACE measurements.
+1518,IMS,IMS,0.98957,offline/online charging records -> MDE?,I'm checking CCA responses received with Result-Code = Bypass CCN enabled. Bring up the related peer-VNF platform DIAMRE RO INTERFACE measurements for the last 2 days.
+1519,IMS,IMS,1.0,offline/online charging records -> MDE?,I'd like to check NUM_CCA_RESP_RCVD_WITH_RC_9002 in peer-VNF platform DIAMRE RO INTERFACE. Retrieve its readings for the last 2 days.
+1520,IMS,IMS,0.99997,offline/online charging records -> MDE?,What do the available peer-VNF platform DIAMRE RO INTERFACE measurements show for CCA responses received with Result-Code = Oracle Error - Enable to perform charging/refund correlation during the last 2 days?
+1521,IMS,IMS,1.0,offline/online charging records -> MDE?,I'd like to check NUM_CCA_RESP_RCVD_WITH_RC_9005 in peer-VNF platform DIAMRE RO INTERFACE. Retrieve its readings for the last 2 days.
+1522,MDE,MDE,0.99519,offline/online charging records -> MDE?,I'm checking CCA responses received with Result-Code = Refund Failed: last charge for transaction id was unsuccessful. Bring up the related peer-VNF platform DIAMRE RO INTERFACE measurements for the last 2 days.
+1543,IMS,IMS,0.99995,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I'd like to check INAP_IDP_INV_SENT in peer-VNF platform INAP. Retrieve its readings for the last 2 days.
+1544,IMS,PLATFORM,0.99694,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Could you look into sent INAP Initial Detection Point (IDP) Invoke using the last 2 days of peer-VNF platform INAP measurements?
+1545,IMS,IMS,0.99985,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Show the available INAP_OPEN_CFM_RCVD samples over the past 2 days from peer-VNF platform INAP.
+1546,IMS,PLATFORM,0.97682,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Pull up the last 2 days of peer-VNF platform INAP data related to received INAP OPEN Confirm.
+1557,PACO,PLATFORM,1.0,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Retrieve the timestamped M3UA_DAUD_RCVD measurements for the past 2 days from peer-VNF platform M3UA.
+1558,MCO,MCO,0.99426,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I'm checking M3UA DAUD messages received. Bring up the related peer-VNF platform M3UA measurements for the last 2 days.
+1559,PLATFORM,PLATFORM,0.9999,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I'd like to check M3UA_NOTIFY_RCVD in peer-VNF platform M3UA. Retrieve its readings for the last 2 days.
+1560,PLATFORM,PLATFORM,0.99989,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Show the readings related to M3UA notification messages received in peer-VNF platform M3UA for the past 2 days.
+1561,PLATFORM,PLATFORM,0.99996,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,"Looking at peer-VNF platform M3UA Associations, what does M3UA_ASPIA_ACK_RCVD show for the past 2 days?"
+1562,PLATFORM,PLATFORM,0.99939,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Could you look into ASP Inactive acknowledgments received using the last 2 days of peer-VNF platform M3UA Associations measurements?
+1563,RAN,PLATFORM,0.99552,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I need the recorded M3UA_BYTE_RCVD samples from peer-VNF platform M3UA Associations for the last 2 days.
+1564,PLATFORM,PLATFORM,0.99986,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,"Please check the measurements associated with total number bytes received for M3UA payload in peer-VNF platform M3UA Associations, covering the last 2 days."
+1565,PLATFORM,PLATFORM,0.99999,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,What values were recorded for MAP_ACTIVE_DIALOG over the last 2 days in peer-VNF platform MAP?
+1566,PLATFORM,PLATFORM,0.99997,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Please pull the recorded readings for MAP Dialogs usage over the past 2 days from peer-VNF platform MAP.
+1567,PLATFORM,PACO,0.82748,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Fetch MAP_MO_FSM_RCVD from peer-VNF platform MAP for the last 2 days.
+1568,PACO,PACO,0.99964,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,What do the available peer-VNF platform MAP measurements show for one reception MO FSM during the last 2 days?
+1569,MCO,PLATFORM,0.99997,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Please look up MAP_SES_ACK_SENT for the last 2 days in the peer-VNF platform MAP measurements.
+1570,PLATFORM,PLATFORM,0.99909,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,How do the recorded values for send End Signal response sent look over the last 2 days in peer-VNF platform MAP?
+1571,PACO,PLATFORM,0.95378,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,What values were recorded for MAP_UPDATE_PS_LOC_RET_ERR_RCVD over the last 2 days in peer-VNF platform MAP?
+1572,PLATFORM,PLATFORM,0.99999,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I need to review update GPRS Location Error received in peer-VNF platform MAP; show the measurements for the past 2 days.
+1577,IMS,IMS,0.99976,IMS/SIP subject -> IMS?,Get the last 2 days of reported SIPRE_ROUTING_RESELECTION values from peer-VNF platform Routing.
+1581,IMS,IMS,0.99906,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Retrieve the timestamped SCCP_CONN_REFUSE_RCVD measurements for the past 2 days from peer-VNF platform SCCP.
+1582,IMS,IMS,0.99924,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Show the readings related to SCCP CREF received in peer-VNF platform SCCP for the past 2 days.
+1583,IMS,IMS,0.99968,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Please look up SCCP_XUDTS_RCVD for the last 2 days in the peer-VNF platform SCCP measurements.
+1584,IMS,IMS,0.99929,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I need to review SCCP XUDT S received in peer-VNF platform SCCP; show the measurements for the past 2 days.
+1585,MCO,MCO,1.0,messaging (SMS/SMTP/MMS) -> MCO?,"Looking at peer-VNF platform SMTP, what does SMTP_HELO_EHLO_504_RCVD show for the past 2 days?"
+1586,MCO,PLATFORM,0.87792,messaging (SMS/SMTP/MMS) -> MCO?,I need to review rsp 504 for cmd helo/ehlo received in peer-VNF platform SMTP; show the measurements for the past 2 days.
+1587,MCO,MCO,1.0,messaging (SMS/SMTP/MMS) -> MCO?,Show the available SMTP_QUIT_221_RCVD samples over the past 2 days from peer-VNF platform SMTP.
+1588,MCO,MCO,0.51496,messaging (SMS/SMTP/MMS) -> MCO?,Pull up the last 2 days of peer-VNF platform SMTP data related to rsp 221 for cmd quit received.
+1589,MCO,MCO,0.99997,messaging (SMS/SMTP/MMS) -> MCO?,Please look up SMTP_VRFY_252_RCVD for the last 2 days in the peer-VNF platform SMTP measurements.
+1590,MCO,PLATFORM,0.47605,messaging (SMS/SMTP/MMS) -> MCO?,Show the readings related to rsp 252 for cmd vrfy received in peer-VNF platform SMTP for the past 2 days.
+1591,MCO,MCO,0.99997,messaging (SMS/SMTP/MMS) -> MCO?,What values were recorded for SMTP_MM4_DELIVERY_REPORT_RES_SND_MESSAGE_FORAMT_CORRUPT over the last 2 days in peer-VNF platform SMTP MM4?
+1592,MCO,MCO,0.99979,messaging (SMS/SMTP/MMS) -> MCO?,I'd like the last 2 days of measurements for sent MM4 Delivery Report Response with Request Status Code ? ERROR MESSAGE FORAMT C ORRUPT from peer-VNF platform SMTP MM4.
+1593,MCO,MCO,0.99959,messaging (SMS/SMTP/MMS) -> MCO?,Retrieve the timestamped SMTP_MM4_FWD_RES_RCVD_ERROR_SENDING_ADDRESS_UNRESOLVED measurements for the past 2 days from peer-VNF platform SMTP MM4.
+1594,MCO,MCO,0.96059,messaging (SMS/SMTP/MMS) -> MCO?,"Can you check on receiving MM4 Forward Response with ""Request Status Code -ERROR SENDING ADDRESS UNRESOL VED"" in peer-VNF platform SMTP MM4 over the last 2 days?"
+1595,MCO,MCO,0.99995,messaging (SMS/SMTP/MMS) -> MCO?,Show the available SMTP_MM4_READREPLY_REPORT_RES_RCV_NETWORK_PROBLEM samples over the past 2 days from peer-VNF platform SMTP MM4.
+1596,MCO,PLATFORM,0.99522,messaging (SMS/SMTP/MMS) -> MCO?,What do the available peer-VNF platform SMTP MM4 measurements show for received MM4 read-reply report responses indicating a network problem during the last 2 days?
+1599,PLATFORM,PLATFORM,0.99643,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I need the recorded TCAP_CMP_RCVD samples from peer-VNF platform TCAP for the last 2 days.
+1600,RAN,PLATFORM,0.46567,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,I'm checking times TCAP Component received. Bring up the related peer-VNF platform TCAP measurements for the last 2 days.
+1601,PLATFORM,PLATFORM,0.99999,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Retrieve the timestamped TCAP_CWOP_RCVD measurements for the past 2 days from peer-VNF platform TCAP.
+1602,PLATFORM,PLATFORM,0.99986,SS7/IN signalling (CAP/MAP/INAP/TCAP/SCCP/M3UA) - not packet core,Can you retrieve the timestamped measurements concerning times TCAP Conversation Without Permission received (ANSI only) from peer-VNF platform TCAP for the last 2 days?

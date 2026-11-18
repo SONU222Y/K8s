@@ -1,0 +1,80 @@
+Excel Row,pickA,pickB,confB,Query
+1450,PACO,PLATFORM,0.35387,How can peer-VNF database-adapter-manager outcomes and minimum/maximum/average latency be used to investigate database access where that manager is deployed?
+1452,PACO,MCO,0.97291,How can per-protocol packet counts and per-external-IP connection-tracking results distinguish peer-VNF front-end traffic processing problems?
+1457,RAN,PACO,0.99828,"Which peer-VNF X2 delivery, buffering and drop measurements and X3 media-specific scopes are explicitly documented for applicable lawful-interception peers?"
+1460,PACO,PACO,0.97053,"Which documented Rx request, response and error categories help investigate policy authorization on an applicable peer-VNF interface?"
+1461,PACO,MCO,0.76647,"How can peer-VNF HTTP client queueing, connection and response failures be distinguished from server-side routing, validation and application timeout results?"
+1464,IMS,IMS,1.0,"How do peer-VNF flow-control connection creation/release, active tracks and no-free-entry or missing-flow drops describe a VLB forwarding incident?"
+1475,MDE,MDE,0.99991,"Which peer-VNF Ro credit-control timeout, result-code and experimental-result measurements help localize charging failures where Ro is deployed?"
+1477,IMS,IMS,0.99999,Which documented peer-VNF UAG data-path rates and discard reasons separate traffic-volume changes from malformed or policy-rejected packets?
+1480,PACO,PACO,0.40913,"How are incoming and outgoing TCP establishment and clearance measurements defined, and why can idle peer-VNF shutdown affect clearance counts?"
+1486,PACO,PACO,0.53653,"How should minimum, maximum and average peer-VNF RMS-to-CS REST transaction measurements be compared when investigating an unexpected transaction-load change?"
+1488,MCO,MCO,0.74183,"Which platform SNMP heartbeat event evidence should be checked when monitoring visibility is missing, without treating the event as a product-specific peer-VNF performance counter?"
+1489,PLATFORM,PLATFORM,0.99995,I'd like to check CID_CARD_REBOOT in peer-VNF platform system utilization. Retrieve its readings for the last 2 days.
+1490,PLATFORM,PLATFORM,0.99819,"Can you retrieve the timestamped measurements concerning reboots performed. The counter would capture all scenarios when card went into OOS including reboot, card plugged out, restart, Admin Log from peer-VNF platform system utilization for the last 2 days?"
+1491,RAN,MCO,0.99956,Show the available Critical_Alarm samples over the past 2 days from peer-VNF platform Alarm.
+1492,PLATFORM,PLATFORM,1.0,"Please check the measurements associated with critical Alarms generated in the measured period in peer-VNF platform Alarm, covering the last 2 days."
+1493,PACO,PLATFORM,0.99997,Please look up CID_AVG_AVAIL_HD_SPACE for the last 2 days in the peer-VNF platform Average Overload measurements.
+1494,PLATFORM,PLATFORM,0.99934,"Can you check average available hard disk space available during the reporting period, sampled at 5 minute intervals and reported as a percentage of total HD memory in peer-VNF platform Average Overload over the last 2 days?"
+1503,PACO,MCO,0.68759,I'd like to check AVG_INC_THROUGHPUT_VNF_APP_INTERFACE in peer-VNF platform CAS platform. Retrieve its readings for the last 2 days.
+1505,PACO,PLATFORM,0.99934,Please look up TOTAL_TRL_FAILED_TO_SYNC_PER_VNFID for the last 2 days in the peer-VNF platform CAS transaction logs measurements.
+1506,MDE,MDE,0.99796,Please pull the recorded readings for the count of the TRL files that have failed in transfer towards OSS/BSS interface per vnf id over the past 2 days from peer-VNF platform CAS transaction logs.
+1509,PLATFORM,MDE,0.83376,Get the last 2 days of reported CS_HTTP_MAX values from peer-VNF platform RMS/CS transaction processing.
+1510,PLATFORM,PLATFORM,0.99991,I'd like the last 2 days of measurements for the Maximum number of REST transactions between the RMS and CS from peer-VNF platform RMS/CS transaction processing.
+1511,PACO,PLATFORM,0.99999,"Looking at peer-VNF platform database adapter manager, what does DB_ADAPTER_MGR_LATENCY_MIN show for the past 2 days?"
+1512,PLATFORM,PLATFORM,0.99262,Show the readings related to minimum connection latency for the database adapter manager; units and timing endpoints are not stated in peer-VNF platform database adapter manager for the past 2 days.
+1513,IMS,IMS,1.0,What values were recorded for RE_PERF_DIAMRE_AVG_LATENCY over the last 2 days in peer-VNF platform DIAMRE?
+1514,IMS,IMS,1.0,Get the last 2 days of reported RE_CX_NUM_MAA_RESP_RCVD_WITH_ERC_5006 values from peer-VNF platform DIAMRE CX INTERFACE.
+1515,IMS,IMS,1.0,What values were recorded for RE_CX_NUM_SAA_RESP_RCVD_WITH_ERC_5002 over the last 2 days in peer-VNF platform DIAMRE CX INTERFACE?
+1516,IMS,IMS,1.0,I'd like to check RE_RF_NUM_ACA_RESP_RCVD_WITH_RC_3006 in peer-VNF platform DIAMRE RF INTERFACE. Retrieve its readings for the last 2 days.
+1523,IMS,IMS,1.0,Get the last 2 days of reported RE_RX_NUM_ASA_RESP_SENT_WITH_RC_5013 values from peer-VNF platform DIAMRE RX INTERFACE.
+1524,IMS,IMS,0.99999,Please look up RE_RX_NUM_RAA_RESP_SENT_WITH_RC_2001 for the last 2 days in the peer-VNF platform DIAMRE RX INTERFACE measurements.
+1525,IMS,IMS,0.99998,Can you check RAR messages processed successfully and a corresponding RAA message sent for the same in peer-VNF platform DIAMRE RX INTERFACE over the last 2 days?
+1526,IMS,IMS,1.0,Show the available RE_RX_TOTAL_STR_REQ_SENT samples over the past 2 days from peer-VNF platform DIAMRE RX INTERFACE.
+1527,IMS,IMS,1.0,What values were recorded for NUM_ECA_RESP_RCVD_WITH_ERC_XXXX over the last 2 days in peer-VNF platform DIAMRE S13 INTERFACE?
+1528,IMS,IMS,1.0,"Please check the measurements associated with ECA responses received with Experimental-Result-AVP that is not explicitly counted in peer-VNF platform DIAMRE S13 INTERFACE, covering the last 2 days."
+1529,IMS,IMS,0.99858,"Could you check the recent peer-VNF platform DIAMRE SWM INTERFACE readings for NUM_DEA_RESP_RCVD_WITH_RC_5050, covering the last 2 days?"
+1530,IMS,MDE,0.99995,What do the available peer-VNF platform DIAMRE SWM INTERFACE measurements show for DEA response messages received with result code 'DIAM ERROR USER NO NON 3GPP SUBSCRI PTION' during the last 2 days?
+1531,IMS,MDE,0.71462,"Could you check the recent peer-VNF platform DIAMRE SWM INTERFACE readings for NUM_DEA_RESP_RCVD_WITH_RC_5XXX, covering the last 2 days?"
+1532,IMS,MDE,0.99999,"How do the recorded values for DEA response messages received with result code '5XXX'. This KPI doesn't include result codes 5001, 5003, 5004, 5005, 5012, 5050, 5051 and 5052 look over the last 2 days in peer-VNF platform DIAMRE SWM INTERFACE?"
+1533,PACO,PLATFORM,0.99999,Can you pull the last 2 days of CID_AVG_DISK_RES_UTIL for peer-VNF platform Disk Overload?
+1534,PLATFORM,PLATFORM,1.0,"Can you check average disk utilization during the reporting period, sampled at 1 minute intervals in peer-VNF platform Disk Overload over the last 2 days?"
+1535,PLATFORM,PLATFORM,0.88291,Get the last 2 days of reported EG_PKT_RECEIVED__NO_CT__BUT_FLOW values from peer-VNF platform connection-tracking flow control.
+1536,PLATFORM,PLATFORM,0.93617,"Could you look into egress packets received w/o conntrack but hit flow, equal to new Egress Conntrack entries created during TMM interval using the last 2 days of peer-VNF platform connection-tracking flow control measurements?"
+1537,PLATFORM,PLATFORM,1.0,I'd like to check TOTAL_ACTIVE_CONNECTION_TRACKS in peer-VNF platform connection-tracking flow control. Retrieve its readings for the last 2 days.
+1538,PLATFORM,PLATFORM,1.0,What do the available peer-VNF platform connection-tracking flow control measurements show for cumulative count of active Conntrack entries during the last 2 days?
+1539,PACO,PLATFORM,0.99896,I'd like to check HCM_FAILURES_LIFE_TIMEOUT in peer-VNF platform HTTP client manager. Retrieve its readings for the last 2 days.
+1540,MCO,PLATFORM,1.0,What do the available peer-VNF platform HTTP client manager measurements show for failures of requests being kept in queue too long during the last 2 days?
+1541,PACO,PLATFORM,0.99943,Can you pull the last 2 days of HCM_HTTP_REQUESTS_POST for peer-VNF platform HTTP client manager?
+1542,MCO,PLATFORM,0.71034,Could you look into POST method requests using the last 2 days of peer-VNF platform HTTP client manager measurements?
+1547,RAN,PLATFORM,0.81085,Show the available LI_X2_LITCKT_BUFFER_CLEAR samples over the past 2 days from peer-VNF platform LI X2.
+1548,RAN,PLATFORM,0.99813,Show the readings related to X2 LI tickets cleared from store (after successful retransmission to DF2) from persistent memory when the communication with DF2 restored in peer-VNF platform LI X2 for the past 2 days.
+1549,MCO,PLATFORM,0.68133,What values were recorded for X3_MSRP_SND over the last 2 days in peer-VNF platform LI X3?
+1550,IMS,IMS,1.0,I need to review sessions where MSRP transferred over X3 interface. This counter is applicable only for UAG SBC/ATCF/ WebRTC functional mode. As such for other functional mode this counter shall NOT be pegged in peer-VNF platform LI X3; show the measurements for the past 2 days.
+1551,IMS,IMS,0.99998,Retrieve the timestamped SCTP_I_DUP_CHUNKS measurements for the past 2 days from peer-VNF platform LSKSCTP transport.
+1552,RAN,MCO,0.67903,I'm checking duplicate chunks (ordered+unordered). Bring up the related peer-VNF platform LSKSCTP transport measurements for the last 2 days.
+1553,IMS,IMS,0.99959,Please look up SCTP_OUT_OF_SEQ_TSNS for the last 2 days in the peer-VNF platform LSKSCTP transport measurements.
+1554,IMS,IMS,0.99975,Can you check packet which has TSN>next expected in peer-VNF platform LSKSCTP transport over the last 2 days?
+1555,PACO,PLATFORM,0.92839,"Looking at peer-VNF platform Lower Level System, what does TCP_CONN_CLR_OG show for the past 2 days?"
+1556,PLATFORM,PLATFORM,0.99719,What do the available peer-VNF platform Lower Level System measurements show for TCP connections cleared in the outgoing direction with a peer. Note that this could be graceful TCP connection shutdown at the peer due to idle connection during the last 2 days?
+1573,PACO,PLATFORM,0.99979,Retrieve the timestamped MTP3_UPU_RCVD measurements for the past 2 days from peer-VNF platform MTP3.
+1574,RAN,PLATFORM,0.97767,What do the available peer-VNF platform MTP3 measurements show for user part unavailable received during the last 2 days?
+1575,PACO,PLATFORM,0.99993,I'd like to check CID_OVLD_UP_1 in peer-VNF platform Overload. Retrieve its readings for the last 2 days.
+1576,PLATFORM,PLATFORM,0.99993,I'd like the last 2 days of measurements for card entered overload level 1 in the upward direction from peer-VNF platform Overload.
+1578,PLATFORM,PLATFORM,0.99996,I'd like the last 2 days of measurements for reselection done due to the previously identified peer VNF not being available (INS) from peer-VNF platform Routing.
+1579,PLATFORM,PLATFORM,0.99683,I'd like the last 2 days of measurements for “406 Proxy Authentication Required” responses exchanged from peer-VNF platform Routing.
+1580,PLATFORM,PLATFORM,0.99929,How do the recorded values for “604 Does Not Exist Anywhere” responses exchanged look over the last 2 days in peer-VNF platform Routing?
+1597,PLATFORM,PLATFORM,1.0,Retrieve the timestamped AVG_CPU_OCC_FP measurements for the past 2 days from peer-VNF platform fast-path resources.
+1598,PLATFORM,PLATFORM,0.99999,"Please check the measurements associated with fast Path Average CPU occupancy in peer-VNF platform fast-path resources, covering the last 2 days."
+1603,IMS,PACO,0.99397,I need the recorded IG_PKT_DROP__NO_FLOW samples from peer-VNF platform traffic monitoring for the last 2 days.
+1604,PLATFORM,PLATFORM,0.99999,Show the readings related to ingress packets dropped because no flow entry exists in peer-VNF platform traffic monitoring for the past 2 days.
+1605,PACO,PACO,0.99972,I'd like to check PKT_DROP__FP_DROPPED_PER_External_IP in peer-VNF platform traffic monitoring. Retrieve its readings for the last 2 days.
+1606,PLATFORM,PLATFORM,0.99999,"Please check the measurements associated with number packets dropped during TMM interval for both direction in peer-VNF platform traffic monitoring, covering the last 2 days."
+1607,IMS,IMS,0.99998,Can you pull the last 2 days of UAGU_DP_DISCARD_REASON_INVALID_TCP_URG_PTR for peer-VNF platform UAG Data Path?
+1608,IMS,IMS,1.0,I need to review layer-4: URG pointer related error in TCP in peer-VNF platform UAG Data Path; show the measurements for the past 2 days.
+1609,IMS,IMS,1.0,I'd like to check UAGU_DP_DISCARD_REASON_RATE_LIMITING in peer-VNF platform UAG Data Path. Retrieve its readings for the last 2 days.
+1610,IMS,IMS,0.99996,Pull up the last 2 days of peer-VNF platform UAG Data Path data related to packet discarded due to operator defined rate limiting policy enforcement.
+1611,MCO,MCO,0.99997,Retrieve the timestamped WAS_HTTP_GET_REQ_FORWARDED measurements for the past 2 days from peer-VNF platform WAS HTTP message handling.
+1612,MCO,MCO,1.0,Can you check HTTP GET requests sent to application to process in peer-VNF platform WAS HTTP message handling over the last 2 days?
+1613,PACO,MCO,0.99999,I need the recorded WAS_HTTP_REQ_ROUTE_NOT_FOUND samples from peer-VNF platform WAS HTTP message handling for the last 2 days.
+1614,MCO,MCO,0.99999,I'd like the last 2 days of measurements for HTTP requests not matching a route from peer-VNF platform WAS HTTP message handling.

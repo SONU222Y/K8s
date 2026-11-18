@@ -1,0 +1,31 @@
+,term,n,wrongA,ratA,wrongB,ratB,destA,destB,excess
+1,received,127,94,74.0,78,61.4,MDE (29),MDE (24),72.3
+2,http,98,81,82.7,60,61.2,MDE (59),MDE (39),64.0
+3,ike,50,49,98.0,34,68.0,IMS (44),MCO (21),43.7
+4,nat44,50,47,94.0,30,61.2,RAN (25),MCO (13),38.1
+5,responses,60,45,75.0,40,66.7,MDE (31),MDE (28),37.9
+6,ipsec,55,47,85.5,33,60.0,IMS (47),MCO (23),36.8
+7,nat64,48,43,89.6,29,65.9,RAN (23),MCO (14),35.6
+8,notifications,56,38,67.9,39,69.6,MDE (23),PLATFORM (20),33.0
+9,diamre,26,26,100.0,26,100.0,IMS (25),IMS (22),31.6
+10,requests,143,84,58.7,56,39.2,MDE (39),MDE (32),27.7
+11,esp,31,28,90.3,24,77.4,IMS (20),MCO (18),27.7
+12,packets,62,44,71.0,31,53.4,IMS (22),MCO (26),27.6
+13,kafka,31,20,64.5,30,96.8,PLATFORM (9),PLATFORM (25),25.7
+14,error,35,28,80.0,25,71.4,PLATFORM (10),PLATFORM (11),25.5
+15,i'm checking,43,32,74.4,26,60.5,IMS (14),MCO (13),24.2
+16,nat44 and nat64,30,28,93.3,19,65.5,RAN (17),PLATFORM (8),23.8
+17,ikev2,36,36,100.0,15,41.7,IMS (33),MCO (7),22.7
+18,transaction,38,32,84.2,20,52.6,IMS (11),MDE (10),22.2
+19,responses received,26,22,84.6,20,76.9,MDE (18),MDE (16),21.6
+20,sent,53,33,62.3,29,54.7,IMS (11),MCO (12),20.4
+21,control,23,20,87.0,18,78.3,MCO (8),MCO (13),19.9
+22,response,48,31,64.6,26,54.2,PLATFORM (9),PLATFORM (10),19.3
+23,system,42,32,76.2,20,47.6,IMS (12),MDE (7),19.0
+24,messages,23,20,87.0,17,73.9,MCO (9),MCO (13),18.9
+25,received for requests,17,17,100.0,15,88.2,MDE (17),MDE (15),18.6
+26,ipsec esp,20,17,85.0,17,85.0,IMS (17),MCO (12),18.3
+27,like to check,68,38,55.9,33,50.0,IMS (21),MCO (15),18.2
+28,kafka notifications,21,13,61.9,21,100.0,PLATFORM (8),PLATFORM (19),17.5
+29,http notifications,21,20,95.2,13,61.9,MDE (19),MDE (12),16.5
+30,used,41,28,68.3,20,48.8,RAN (10),MCO (12),15.8

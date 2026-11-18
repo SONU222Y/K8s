@@ -1,0 +1,108 @@
+Excel Row,fam,pickA,confA,pickB,confB,cause,Query
+1665,CCLB,PACO,0.99724,PLATFORM,0.9638,CCLB/MDPLB counter in free-form ops phrasing,"CCLB_HA_ACTIVE_SESSION_BACKUP_SENT_TOTAL is much higher than yesterday at the same time, what changed?"
+1667,CCLB,PACO,0.99844,PLATFORM,0.92289,CCLB/MDPLB counter in free-form ops phrasing,"CCLB_HA_ACTIVE_SESSION_BACKUP_SENT_TOTAL spiked in the last 30 minutes, is it still ongoing or already recovered?"
+1668,CCLB,PACO,0.99738,PLATFORM,0.74439,CCLB/MDPLB counter in free-form ops phrasing,"CCLB_HA_ACTIVE_SESSION_BACKUP_SENT_TOTAL has been flat at zero since the upgrade, is the counter still being reported?"
+1678,CCLB,PACO,0.99995,PLATFORM,0.85887,CCLB/MDPLB counter in free-form ops phrasing,"CCLB_HA_STANDBY_SESSION_BACKUP_RECEIVED_TOTAL is much higher than yesterday at the same time, what changed?"
+1680,CCLB,PACO,0.99995,PLATFORM,0.58079,CCLB/MDPLB counter in free-form ops phrasing,"CCLB_HA_STANDBY_SESSION_BACKUP_RECEIVED_TOTAL spiked in the last 30 minutes, is it still ongoing or already recovered?"
+1757,MDPLB,PACO,0.99999,IMS,0.98038,CCLB/MDPLB counter in free-form ops phrasing,What was the peak of MDPLB_SESSION_SCTP_HEARTBEAT_RX_UL_DELTA over the past 7 days and when did it happen?
+1770,MDPLB,PACO,0.99999,IMS,0.76506,CCLB/MDPLB counter in free-form ops phrasing,What was the peak of MDPLB_SESSION_SCTP_HEARTBEAT_ACK_RX_UL_DELTA over the past 7 days and when did it happen?
+1777,MDPLB,PACO,0.99994,IMS,0.74562,CCLB/MDPLB counter in free-form ops phrasing,What was the peak of MDPLB_SESSION_SCTP_SHUTDOWN_ACK_RX_DELTA over the past 7 days and when did it happen?
+167,AUSF,PACO,0.5815,IMS,0.57921,HTTP/request-handling wording,"Is the AUSF overload incident represented by global HTTP 503 load control, per-client HTTP 429 limits or received OCI peer-overload indications?"
+205,AUSF,PACO,0.99946,IMS,0.96721,HTTP/request-handling wording,Get the last 2 days of reported AUSF_NAUSF_AUTH_AV_REQ_OK_COUNT values from AUSF authentication processing.
+254,AUSF,PACO,0.76736,MCO,0.99984,HTTP/request-handling wording,Could you look into detected consumer overload events associated with overload-control indications using the last 2 days of AUSF request handling measurements?
+260,AUSF,PACO,0.76161,IMS,0.99994,HTTP/request-handling wording,How do the recorded values for liveness-probe responses sent by the authentication service look over the last 2 days in AUSF request handling?
+263,AUSF,PACO,0.99311,IMS,0.998,HTTP/request-handling wording,Get the last 2 days of reported AUSF_NAUSF_NOT_READY_COUNT values from AUSF request handling.
+267,AUSF,PACO,0.9992,IMS,0.99628,HTTP/request-handling wording,Get the last 2 days of reported AUSF_NAUSF_REQ_NOT_READY_COUNT values from AUSF request handling.
+269,AUSF,PACO,0.99946,IMS,0.97991,HTTP/request-handling wording,Get the last 2 days of reported AUSF_NAUSF_REQ_OK_COUNT values from AUSF request handling.
+271,AUSF,PACO,0.9993,IMS,0.97574,HTTP/request-handling wording,Get the last 2 days of reported AUSF_NAUSF_REQ_RECV_TOTAL values from AUSF request handling.
+276,AUSF,PACO,0.59442,MCO,0.84368,HTTP/request-handling wording,I'm checking HTTP Too Many Requests error responses sent by the service. Bring up the related AUSF request handling measurements for the last 2 days.
+510,AMF,PACO,0.9965,RAN,0.53647,HTTP/request-handling wording,"During recovery from N2 overload, did AMF send revised reduction percentages or OVERLOAD STOP to the same affected RAN nodes?"
+1378,Provisioning Gateway,PACO,0.82984,MCO,0.99141,HTTP/request-handling wording,Fetch PROVGW_NB_HTTP_SND_RESPONSE_2XX from Provisioning Gateway northbound HTTP for the last 2 days.
+1461,peer-VNF platform,PACO,0.53283,MCO,0.76647,HTTP/request-handling wording,"How can peer-VNF HTTP client queueing, connection and response failures be distinguished from server-side routing, validation and application timeout results?"
+1493,peer-VNF platform,PACO,0.99298,PLATFORM,0.99997,HTTP/request-handling wording,Please look up CID_AVG_AVAIL_HD_SPACE for the last 2 days in the peer-VNF platform Average Overload measurements.
+1533,peer-VNF platform,PACO,0.94582,PLATFORM,0.99999,HTTP/request-handling wording,Can you pull the last 2 days of CID_AVG_DISK_RES_UTIL for peer-VNF platform Disk Overload?
+1539,peer-VNF platform,PACO,0.63084,PLATFORM,0.99896,HTTP/request-handling wording,I'd like to check HCM_FAILURES_LIFE_TIMEOUT in peer-VNF platform HTTP client manager. Retrieve its readings for the last 2 days.
+1541,peer-VNF platform,PACO,0.95573,PLATFORM,0.99943,HTTP/request-handling wording,Can you pull the last 2 days of HCM_HTTP_REQUESTS_POST for peer-VNF platform HTTP client manager?
+1575,peer-VNF platform,PACO,0.60463,PLATFORM,0.99993,HTTP/request-handling wording,I'd like to check CID_OVLD_UP_1 in peer-VNF platform Overload. Retrieve its readings for the last 2 days.
+1613,peer-VNF platform,PACO,0.64523,MCO,0.99999,HTTP/request-handling wording,I need the recorded WAS_HTTP_REQ_ROUTE_NOT_FOUND samples from peer-VNF platform WAS HTTP message handling for the last 2 days.
+155,AUSF,PACO,0.66302,PLATFORM,0.99984,Kafka -> PLATFORM,Does AUSF KafkaConnectionDown match loss of broker connectivity or incorrect configured broker host and port during telemetry loss?
+344,AUSF,PACO,0.56067,MCO,0.95734,Kafka -> PLATFORM,"Can you retrieve the timestamped measurements concerning messages produced to Kafka, classified by topic from AUSF NF management for the last 2 days?"
+346,AUSF,PACO,0.99945,PLATFORM,0.99999,Kafka -> PLATFORM,I'm checking total bytes transmitted to Kafka brokers. Bring up the related AUSF NF management measurements for the last 2 days.
+1352,Provisioning Gateway,PACO,0.77619,PLATFORM,0.99962,Kafka -> PLATFORM,Please look up PROVGW_KAFKA_DATABUS_RCV_RESPONSE_ERR_BROKER_NOT_AVAILABLE for the last 2 days in the Provisioning Gateway northbound Kafka notifications measurements.
+1354,Provisioning Gateway,PACO,0.70661,PLATFORM,0.99892,Kafka -> PLATFORM,Retrieve the timestamped PROVGW_KAFKA_DATABUS_RCV_RESPONSE_ERR_NETWORK_EXCEPTION measurements for the past 2 days from Provisioning Gateway northbound Kafka notifications.
+1358,Provisioning Gateway,PACO,0.91584,PLATFORM,0.75942,Kafka -> PLATFORM,"Bring up PROVGW_KAFKA_DATABUS_RCV_RESPONSE_ERR__ALL_BROKERS_DOWN for Provisioning Gateway northbound Kafka notifications over the last 2 days, keeping the recorded timestamps."
+1360,Provisioning Gateway,PACO,0.51102,PLATFORM,0.99422,Kafka -> PLATFORM,What values were recorded for PROVGW_KAFKA_DATABUS_RCV_RESPONSE_ERR__FAIL over the last 2 days in Provisioning Gateway northbound Kafka notifications?
+1362,Provisioning Gateway,PACO,0.73585,PLATFORM,0.55681,Kafka -> PLATFORM,What values were recorded for PROVGW_KAFKA_DATABUS_RCV_RESPONSE_ERR__FATAL over the last 2 days in Provisioning Gateway northbound Kafka notifications?
+1364,Provisioning Gateway,PACO,0.6878,PLATFORM,0.46909,Kafka -> PLATFORM,"Bring up PROVGW_KAFKA_DATABUS_RCV_RESPONSE_ERR__MSG_TIMED_OUT for Provisioning Gateway northbound Kafka notifications over the last 2 days, keeping the recorded timestamps."
+1366,Provisioning Gateway,PACO,0.64713,PLATFORM,0.99996,Kafka -> PLATFORM,Get the last 2 days of reported PROVGW_KAFKA_DATABUS_RCV_RESPONSE_ERR__TRANSPORT values from Provisioning Gateway northbound Kafka notifications.
+1368,Provisioning Gateway,PACO,0.67975,MDE,0.54817,Kafka -> PLATFORM,Get the last 2 days of reported PROVGW_KAFKA_DATABUS_RCV_RESPONSE_SUCCESS values from Provisioning Gateway northbound Kafka notifications.
+1164,Media Engine,PACO,0.70012,MDE,0.95761,Media Engine,Can you pull the last 2 days of bfd_echo_packets_sen for Media Engine BFD?
+1196,Media Engine,PACO,0.31279,MCO,0.57394,Media Engine,"What do the available Media Engine Fragment measurements show for packets dropped due to ""limit on number of fragments for one IP packet is reached"" during the last 2 days?"
+1226,Media Engine,PACO,0.28886,MCO,0.80254,Media Engine,"How do the recorded values for packets dropped due to ""ACL denial"" look over the last 2 days in Media Engine NAT44?"
+1256,Media Engine,PACO,0.588,MCO,0.77261,Media Engine,"Could you look into packets dropped due to ""reached address mappings limit"" using the last 2 days of Media Engine NAT64 Drop measurements?"
+1264,Media Engine,PACO,0.35204,MDE,0.97502,Media Engine,I'm checking processed Outgoing Call Replies. Bring up the related Media Engine PPTP measurements for the last 2 days.
+1268,Media Engine,PACO,0.86565,PLATFORM,0.86675,Media Engine,"I'd like the last 2 days of measurements for addresses currently used (for pools of type ""nat"") from Media Engine Pool Stats."
+1282,Media Engine,PACO,0.62031,MCO,0.99872,Media Engine,Show the available tcp_null_flags_drops samples over the past 2 days from Media Engine Security.
+1283,Media Engine,PACO,0.65013,MCO,0.99143,Media Engine,Could you look into TCP packets dropped with no flags using the last 2 days of Media Engine Security measurements?
+1284,Media Engine,PACO,0.33693,MCO,0.72158,Media Engine,"Could you check the recent Media Engine Security readings for tcp_xmas_flags_drops, covering the last 2 days?"
+1289,Media Engine,PACO,0.50139,MCO,0.99941,Media Engine,What values were recorded for TCP SYN fragment drops over the last 2 days in Media Engine Security?
+1297,Media Engine,PACO,0.38829,IMS,0.95626,Media Engine,"Could you check the recent Media Engine TCP Optimizer readings for dl_spi_failure, covering the last 2 days?"
+1298,Media Engine,PACO,0.44178,MCO,0.88385,Media Engine,Please pull the recorded readings for times downlink packet processing was failed over the past 2 days from Media Engine TCP Optimizer.
+1302,Media Engine,PACO,0.6025,MCO,0.95668,Media Engine,Can you check packets retransmitted from local cached packets in Media Engine TCP Optimizer over the last 2 days?
+1303,Media Engine,PACO,0.60642,MCO,0.99817,Media Engine,I'd like to check tcp_flows_created in Media Engine TCP Optimizer. Retrieve its readings for the last 2 days.
+375,AUSF,PACO,0.62712,MDE,0.54081,SEPP/security-edge-proxy -> MDE,Can you retrieve the timestamped measurements concerning security-edge-proxy discovery queries that failed or timed out from AUSF SEPP interaction for the last 2 days?
+377,AUSF,PACO,0.3038,MDE,0.99028,SEPP/security-edge-proxy -> MDE,"I need to review security-edge-proxy discovery attempts reported successful by the Service Proxy client, including responses without a usable profile in AUSF SEPP interaction; show the measurements for the past 2 days."
+381,AUSF,PACO,0.94421,MDE,0.98124,SEPP/security-edge-proxy -> MDE,I'm checking status notifications discarded because subscription context was unusable or the notification did not map to a subscribed security-edge proxy. Bring up the related AUSF SEPP interaction measurements for the last 2 days.
+391,AUSF,PACO,0.40243,MDE,0.99999,SEPP/security-edge-proxy -> MDE,How do the recorded values for security-edge-proxy subscription renewal attempts that failed look over the last 2 days in AUSF SEPP interaction?
+393,AUSF,PACO,0.79096,MDE,1.0,SEPP/security-edge-proxy -> MDE,Can you check total security-edge-proxy subscription renewal attempts sent before expiry in AUSF SEPP interaction over the last 2 days?
+148,AUSF,PACO,0.421,MCO,0.81813,malformed/invalid-format wording -> MCO,"Are malformed AUSF HTTP/2 requests or stream reset errors, including the documented invalid content-length case, associated with the incident?"
+209,AUSF,PACO,0.99161,MCO,0.99449,malformed/invalid-format wording -> MCO,Show the available AUSF_NAUSF_AUTH_INVALID_MSG_FORMAT_COUNT samples over the past 2 days from AUSF authentication processing.
+255,AUSF,PACO,0.71039,IMS,0.48009,malformed/invalid-format wording -> MCO,Show the available AUSF_NAUSF_INVALID_API samples over the past 2 days from AUSF request handling.
+1844,Media Engine,PACO,0.99921,MCO,0.902,malformed/invalid-format wording -> MCO,"Threshold alert fired on AUSF_NAUSF_EAP_AKA_SESSION_INVALID_MSG_FORMAT_COUNT at 14:50, give me the 15 minute series around it."
+1845,AUSF,PACO,0.99527,MCO,0.99958,malformed/invalid-format wording -> MCO,"Overlay AUSF_NAUSF_EAP_AKA_SESSION_INVALID_MSG_FORMAT_COUNT on yesterday's evening traffic peak, did it follow the load?"
+1846,AUSF,PACO,0.95006,MCO,0.48873,malformed/invalid-format wording -> MCO,Break down AUSF_NAUSF_EAP_AKA_SESSION_INVALID_MSG_FORMAT_COUNT per pod for the busiest hour today.
+1847,AUSF,PACO,0.99951,MCO,0.99994,malformed/invalid-format wording -> MCO,Export AUSF_NAUSF_EAP_AKA_SESSION_INVALID_MSG_FORMAT_COUNT for the 02:00 to 04:00 maintenance window and compare it with the hour before.
+1849,AUSF,PACO,0.99971,MCO,0.99664,malformed/invalid-format wording -> MCO,Compare AUSF_NAUSF_EAP_AKA_SESSION_INVALID_MSG_FORMAT_COUNT this week against the same weekday last week.
+1982,AUSF,PACO,0.99996,MCO,0.99809,malformed/invalid-format wording -> MCO,"AUSF_NAUSF_EAP_SESSION_INVALID_MSG_FORMAT_COUNT dropped below its usual level after last night's maintenance window, what is the delta against the previous week?"
+1983,AUSF,PACO,0.99948,MCO,0.99004,malformed/invalid-format wording -> MCO,"Plot AUSF_NAUSF_EAP_SESSION_INVALID_MSG_FORMAT_COUNT per peer and per label for the last 6 hours, one site looks different."
+1984,AUSF,PACO,0.99976,MCO,0.99962,malformed/invalid-format wording -> MCO,"Compare AUSF_NAUSF_EAP_SESSION_INVALID_MSG_FORMAT_COUNT today against yesterday for the same hours, did it move?"
+1985,Media Engine,PACO,0.99645,MCO,0.98569,malformed/invalid-format wording -> MCO,"Threshold alert fired on AUSF_NAUSF_EAP_SESSION_INVALID_MSG_FORMAT_COUNT at 14:50, give me the 15 minute series around it."
+1986,AUSF,PACO,0.98833,MCO,0.99989,malformed/invalid-format wording -> MCO,"Overlay AUSF_NAUSF_EAP_SESSION_INVALID_MSG_FORMAT_COUNT on yesterday's evening traffic peak, did it follow the load?"
+1987,AUSF,PACO,0.94371,MCO,0.92767,malformed/invalid-format wording -> MCO,Break down AUSF_NAUSF_EAP_SESSION_INVALID_MSG_FORMAT_COUNT per pod for the busiest hour today.
+78,PCF/PCRF/policy,PACO,0.98652,MCO,0.99985,other,"For notifications missing at UDM or PCF, inspect existing udr-notify delivery evidence and whether the affected consumer previously subscribed."
+192,AUSF,PACO,0.96546,IMS,0.99982,other,Does existing get_ausf_version output show a consistent build across AUSF instances involved in the incident?
+208,AUSF,PACO,0.91649,MCO,0.48846,other,Could you look into total authentication-vector requests received using the last 2 days of AUSF authentication processing measurements?
+244,AUSF,PACO,0.35379,MCO,0.972,other,Can you check CCA authorization failures in AUSF request handling over the last 2 days?
+256,AUSF,PACO,0.56634,MCO,0.40073,other,Can you check non-authentication-service requests received on the authentication-service interface in AUSF request handling over the last 2 days?
+466,PCF/PCRF/policy,PACO,0.83239,MCO,0.68424,other,"Could local policy, Allowed NSSAI, AMF-served UE usage setting or PCF authorization explain an RFSP index different from the subscribed value?"
+644,ePDG,PACO,0.34037,MDE,0.45336,other,How does centralized ePDG management retain application configuration while exposing cloud-native lifecycle functions through APIs?
+821,ePDG,PACO,0.6247,PLATFORM,0.87494,other,"Bring up EPDG_DP_IPSEC_TOTAL_TRANSPORT for ePDG IPsec over the last 2 days, keeping the recorded timestamps."
+825,ePDG,PACO,0.99898,IMS,1.0,other,"Looking at ePDG Latency, what does EPDG_DIAM_AVG_LATENCY show for the past 2 days?"
+829,ePDG,PACO,0.90337,IMS,1.0,other,"Could you check the recent ePDG Latency readings for EPDG_DIAM_MIN_LATENCY, covering the last 2 days?"
+980,SeGW,PACO,0.34366,MCO,0.66661,other,How can SeGW QoS subport statistics and the brief QoS configuration help localize congestion above an individual pipe?
+1099,SeGW,PACO,0.99992,MCO,0.99997,other,"Looking at SeGW IPsec ESP, what does DP_IPSEC_PEAK_TRANSPORT show for the past 2 days?"
+1105,SeGW,PACO,0.97687,MCO,0.93154,other,I'd like to check DP_IPSEC_TUNNEL_INACTIVITY_TIMEOUT_PEAK_RATE in SeGW IPsec ESP. Retrieve its readings for the last 2 days.
+1479,NFV platform (infra),PACO,0.55866,PLATFORM,0.95076,other,How are NFV platform alarms and events viewed and regenerated when checking monitoring visibility?
+1638,SMF/UPF/PDU session,PACO,0.62888,PLATFORM,0.78785,other,"Investigate why AN release sometimes causes the PDU session to be lost, pull the related counters and logs and tell us what stands out."
+1642,SMF/UPF/PDU session,PACO,0.37498,PLATFORM,0.98586,other,"RCA needed for an incident where PDU session modification fails after a handover, what is the most likely root cause and how do we confirm it?"
+1643,SMF/UPF/PDU session,PACO,0.31673,PLATFORM,0.97813,other,"RCA needed for an incident where AN release sometimes causes the PDU session to be lost, what is the most likely root cause and how do we confirm it?"
+1450,peer-VNF platform,PACO,0.44528,PLATFORM,0.35387,peer-VNF platform,How can peer-VNF database-adapter-manager outcomes and minimum/maximum/average latency be used to investigate database access where that manager is deployed?
+1452,peer-VNF platform,PACO,0.99688,MCO,0.97291,peer-VNF platform,How can per-protocol packet counts and per-external-IP connection-tracking results distinguish peer-VNF front-end traffic processing problems?
+1497,peer-VNF platform,PACO,0.80059,PLATFORM,1.0,peer-VNF platform,"Bring up CAP_PA_INV_RCVD for peer-VNF platform CAP over the last 2 days, keeping the recorded timestamps."
+1503,peer-VNF platform,PACO,0.99902,MCO,0.68759,peer-VNF platform,I'd like to check AVG_INC_THROUGHPUT_VNF_APP_INTERFACE in peer-VNF platform CAS platform. Retrieve its readings for the last 2 days.
+1505,peer-VNF platform,PACO,0.94136,PLATFORM,0.99934,peer-VNF platform,Please look up TOTAL_TRL_FAILED_TO_SYNC_PER_VNFID for the last 2 days in the peer-VNF platform CAS transaction logs measurements.
+1511,peer-VNF platform,PACO,0.47199,PLATFORM,0.99999,peer-VNF platform,"Looking at peer-VNF platform database adapter manager, what does DB_ADAPTER_MGR_LATENCY_MIN show for the past 2 days?"
+1555,peer-VNF platform,PACO,0.99878,PLATFORM,0.92839,peer-VNF platform,"Looking at peer-VNF platform Lower Level System, what does TCP_CONN_CLR_OG show for the past 2 days?"
+1557,peer-VNF platform,PACO,0.99963,PLATFORM,1.0,peer-VNF platform,Retrieve the timestamped M3UA_DAUD_RCVD measurements for the past 2 days from peer-VNF platform M3UA.
+1571,peer-VNF platform,PACO,0.84523,PLATFORM,0.95378,peer-VNF platform,What values were recorded for MAP_UPDATE_PS_LOC_RET_ERR_RCVD over the last 2 days in peer-VNF platform MAP?
+1573,peer-VNF platform,PACO,0.98674,PLATFORM,0.99979,peer-VNF platform,Retrieve the timestamped MTP3_UPU_RCVD measurements for the past 2 days from peer-VNF platform MTP3.
+1632,AMF,PACO,0.99992,IMS,0.88171,pod/K8s wording -> PLATFORM,"I need to enable subscriber level tracing for a SUPI on the AMF, which parameters are involved and does the change need a restart or a pod rollout?"
+1818,AUSF,PACO,0.66639,MCO,0.99999,pod/K8s wording -> PLATFORM,"I need to activate a subscriber trace on the N12 interface on the AUSF, which mCMS or CLI parameters are involved and does the change need a restart or a pod rollout?"
+1819,AUSF,PACO,0.38555,PLATFORM,0.54511,pod/K8s wording -> PLATFORM,"I need to run get_ausf_supi to check the stored context of one subscriber on the AUSF, which mCMS or CLI parameters are involved and does the change need a restart or a pod rollout?"
+1908,AUSF,PACO,0.99421,PLATFORM,0.6141,pod/K8s wording -> PLATFORM,Break down AUSF_NAUSF_EAP_TLS_SESSION_REQ_RECV_TOTAL per pod for the busiest hour today.
+1915,AUSF,PACO,0.96188,PLATFORM,0.93367,pod/K8s wording -> PLATFORM,Break down AUSF_NAUSF_EAP_TLS_SESSION_CACHE_FULL_COUNT per pod for the busiest hour today.
+1815,AUSF,PACO,0.9375,MCO,0.57894,subscriber/context wording -> MCO,"Get_ausf_supi shows an old context for a subscriber who already deregistered, where should we start looking?"
+1816,AUSF,PACO,0.99398,MCO,0.7802,subscriber/context wording -> MCO,"Get_ausf_supi finds no context for a subscriber who is registered, and it only started after the last upgrade, which checks do we run first?"
+1817,AUSF,PACO,0.98377,MCO,0.74359,subscriber/context wording -> MCO,"Del_ausf_supi was used and the subscriber still fails to register, and it only started after the last upgrade, which checks do we run first?"
+1822,AUSF,PACO,0.70006,MCO,0.88387,subscriber/context wording -> MCO,"Investigate why get_ausf_supi shows an old context for a subscriber who already deregistered, pull the related counters and logs and tell us what stands out."
+1823,AUSF,PACO,0.33812,MCO,0.99321,subscriber/context wording -> MCO,"RCA needed for an incident where get_ausf_supi finds no context for a subscriber who is registered, what is the most likely root cause and how do we confirm it?"
