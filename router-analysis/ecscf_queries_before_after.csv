@@ -1,0 +1,506 @@
+Excel Row,status,form,before_pick,before_conf,after_pick,after_conf,Query
+212,NOT IMPROVED,text (E-CSCF),PACO,0.47395,RAN,0.70497,"emergency REGISTER succeeds but emergency call routing fails—which of emergency indication, registered contact, Request-URI, and E-CSCF route should I correlate to test the hypothesis of emergency classification or route configuration?"
+214,NOT IMPROVED,text (E-CSCF),PACO,0.6521,RAN,0.42178,"For emergency REGISTER succeeds but emergency call routing fails, which configuration, state, and peer-health values should I compare against emergency indication, registered contact, Request-URI, and E-CSCF route?"
+215,NOT IMPROVED,text (E-CSCF),PACO,0.68914,RAN,0.64592,"For an incident described as emergency REGISTER succeeds but emergency call routing fails, what minimum evidence from emergency indication, registered contact, Request-URI, and E-CSCF route is needed before assigning a root cause?"
+218,IMPROVED,text (E-CSCF),MCO,0.51636,IMS,0.99745,What evidence would distinguish missing emergency indication or URI normalization from E-CSCF unavailability in this case: a request to an emergency number is handled as ordinary traffic?
+221,right in both,text (E-CSCF),IMS,1.0,IMS,0.99994,"After ruling out E-CSCF unavailability, which handoff in P-CSCF ingress to CSCF emergency classification should I inspect next to localize missing emergency indication or URI normalization?"
+681,right in both,text (E-CSCF),IMS,1.0,IMS,0.99981,Which network elements can forward emergency requests to E-CSCF?
+682,IMPROVED,text (E-CSCF),MCO,0.92728,IMS,0.93332,How should the guide's anonymous-emergency local-policy caveat and documented E-CSCF 403 behavior be interpreted together?
+685,right in both,text (E-CSCF),IMS,1.0,IMS,0.99998,An anonymous emergency session receives 403 from E-CSCF; which documented behavior and local-policy qualification apply?
+697,right in both,text (E-CSCF),IMS,1.0,IMS,0.9247,What emergency and priority treatment is described at the relevant P/E-CSCF overload paths?
+1017,right in both,counter (ECSCF_*),IMS,0.99988,IMS,0.99989,"Break down ECSCF_SIP_SND_INV_491 by the peer, interface, component, or reporting dimension available in the counter output."
+1018,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_513 for the last 24 hours and return its collection interval and node scope.
+1019,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99981,Compare ECSCF_SIP_SND_INV_600 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+1020,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_491 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+1021,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,The ECSCF_SIP_RCV_OPT_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+1022,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_UPDATE_200 over the last 7 days and identify the intervals with the largest change.
+1144,IMPROVED,text (E-CSCF),PACO,0.99416,IMS,0.99707,Trace a representative signaling path involving E-CSCF and emergency sessions; distinguish documented responsibilities from assumptions about deployment topology.
+1154,right in both,text (E-CSCF),IMS,1.0,IMS,0.99991,Compare E-CSCF and emergency sessions with the closest related UAG function and state which interface or call-flow evidence distinguishes them.
+1179,right in both,text (E-CSCF),IMS,0.99922,IMS,0.99941,A service issue appears in E-CSCF and emergency sessions; map the control-plane and user-plane observations needed to localize the fault.
+3377,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_405 for the last hour and return its collection interval and node scope.
+3378,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_100 for the last hour and return its collection interval and node scope.
+3379,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_400 for the last hour and return its collection interval and node scope.
+3380,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_415 for the last hour and return its collection interval and node scope.
+3381,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_486 for the last hour and return its collection interval and node scope.
+3382,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_503 for the last hour and return its collection interval and node scope.
+3383,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,The ECSCF_SIP_SND_INV_405 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3384,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,The ECSCF_SIP_SND_INV_100 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3385,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_181 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3386,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_199 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3387,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INV_202 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3388,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_400 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3389,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_403 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3390,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_INV_404 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3391,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_408 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3392,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_INV_413 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3393,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_415 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3394,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INV_420 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3395,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INV_421 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3396,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,The ECSCF_SIP_SND_INV_480 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3397,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,The ECSCF_SIP_SND_INV_483 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3398,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INV_486 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3399,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,The ECSCF_SIP_SND_INV_488 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3400,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,The ECSCF_SIP_SND_INV_491 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3401,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_501 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3402,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_INV_503 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3403,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_INV_505 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3404,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_513 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3405,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_600 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3406,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,The ECSCF_SIP_SND_INV_604 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3407,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INV_405 over the last 7 days and identify the intervals with the largest change.
+3408,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_INV_100 over the last 7 days and identify the intervals with the largest change.
+3409,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_INV_181 over the last 7 days and identify the intervals with the largest change.
+3410,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_INV_199 over the last 7 days and identify the intervals with the largest change.
+3411,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,Show a time-series trend for ECSCF_SIP_SND_INV_202 over the last 7 days and identify the intervals with the largest change.
+3412,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_INV_400 over the last 7 days and identify the intervals with the largest change.
+3413,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INV_403 over the last 7 days and identify the intervals with the largest change.
+3414,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,Show a time-series trend for ECSCF_SIP_SND_INV_404 over the last 7 days and identify the intervals with the largest change.
+3415,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INV_408 over the last 7 days and identify the intervals with the largest change.
+3416,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INV_413 over the last 7 days and identify the intervals with the largest change.
+3417,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_INV_415 over the last 7 days and identify the intervals with the largest change.
+3418,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_INV_420 over the last 7 days and identify the intervals with the largest change.
+3419,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Show a time-series trend for ECSCF_SIP_SND_INV_421 over the last 7 days and identify the intervals with the largest change.
+3420,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,Show a time-series trend for ECSCF_SIP_SND_INV_480 over the last 7 days and identify the intervals with the largest change.
+3421,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INV_483 over the last 7 days and identify the intervals with the largest change.
+3422,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Show a time-series trend for ECSCF_SIP_SND_INV_486 over the last 7 days and identify the intervals with the largest change.
+3423,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_INV_488 over the last 7 days and identify the intervals with the largest change.
+3424,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Show a time-series trend for ECSCF_SIP_SND_INV_491 over the last 7 days and identify the intervals with the largest change.
+3425,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Show a time-series trend for ECSCF_SIP_SND_INV_501 over the last 7 days and identify the intervals with the largest change.
+3426,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,Show a time-series trend for ECSCF_SIP_SND_INV_503 over the last 7 days and identify the intervals with the largest change.
+3427,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INV_505 over the last 7 days and identify the intervals with the largest change.
+3428,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_INV_513 over the last 7 days and identify the intervals with the largest change.
+3429,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INV_600 over the last 7 days and identify the intervals with the largest change.
+3430,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_INV_604 over the last 7 days and identify the intervals with the largest change.
+3431,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99985,Compare ECSCF_SIP_SND_INV_405 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3432,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,Compare ECSCF_SIP_SND_INV_100 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3433,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99984,Compare ECSCF_SIP_SND_INV_181 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3434,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99987,Compare ECSCF_SIP_SND_INV_199 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3435,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Compare ECSCF_SIP_SND_INV_202 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3436,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99983,Compare ECSCF_SIP_SND_INV_400 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3437,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99982,Compare ECSCF_SIP_SND_INV_403 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3438,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9998,Compare ECSCF_SIP_SND_INV_404 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3439,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99986,Compare ECSCF_SIP_SND_INV_408 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3440,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99983,Compare ECSCF_SIP_SND_INV_413 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3441,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99985,Compare ECSCF_SIP_SND_INV_415 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3442,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,Compare ECSCF_SIP_SND_INV_420 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3443,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Compare ECSCF_SIP_SND_INV_421 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3444,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9998,Compare ECSCF_SIP_SND_INV_480 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3445,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99984,Compare ECSCF_SIP_SND_INV_483 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3446,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Compare ECSCF_SIP_SND_INV_486 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3447,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,Compare ECSCF_SIP_SND_INV_488 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3448,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99987,Compare ECSCF_SIP_SND_INV_491 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3449,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99984,Compare ECSCF_SIP_SND_INV_501 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3450,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99978,Compare ECSCF_SIP_SND_INV_503 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3451,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99984,Compare ECSCF_SIP_SND_INV_505 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3452,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99987,Compare ECSCF_SIP_SND_INV_513 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3453,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,Compare ECSCF_SIP_SND_INV_604 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3454,right in both,counter (ECSCF_*),IMS,0.99983,IMS,0.99989,"Break down ECSCF_SIP_SND_INV_405 by the peer, interface, component, or reporting dimension available in the counter output."
+3455,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.9999,"Break down ECSCF_SIP_SND_INV_100 by the peer, interface, component, or reporting dimension available in the counter output."
+3456,right in both,counter (ECSCF_*),IMS,0.99985,IMS,0.99988,"Break down ECSCF_SIP_SND_INV_181 by the peer, interface, component, or reporting dimension available in the counter output."
+3457,right in both,counter (ECSCF_*),IMS,0.99989,IMS,0.99988,"Break down ECSCF_SIP_SND_INV_199 by the peer, interface, component, or reporting dimension available in the counter output."
+3458,right in both,counter (ECSCF_*),IMS,0.99994,IMS,0.99993,"Break down ECSCF_SIP_SND_INV_202 by the peer, interface, component, or reporting dimension available in the counter output."
+3459,right in both,counter (ECSCF_*),IMS,0.99981,IMS,0.9999,"Break down ECSCF_SIP_SND_INV_400 by the peer, interface, component, or reporting dimension available in the counter output."
+3460,right in both,counter (ECSCF_*),IMS,0.99981,IMS,0.99989,"Break down ECSCF_SIP_SND_INV_403 by the peer, interface, component, or reporting dimension available in the counter output."
+3461,right in both,counter (ECSCF_*),IMS,0.99985,IMS,0.99985,"Break down ECSCF_SIP_SND_INV_404 by the peer, interface, component, or reporting dimension available in the counter output."
+3462,right in both,counter (ECSCF_*),IMS,0.99994,IMS,0.99989,"Break down ECSCF_SIP_SND_INV_408 by the peer, interface, component, or reporting dimension available in the counter output."
+3463,right in both,counter (ECSCF_*),IMS,0.99993,IMS,0.99987,"Break down ECSCF_SIP_SND_INV_413 by the peer, interface, component, or reporting dimension available in the counter output."
+3464,right in both,counter (ECSCF_*),IMS,0.99982,IMS,0.99987,"Break down ECSCF_SIP_SND_INV_415 by the peer, interface, component, or reporting dimension available in the counter output."
+3465,right in both,counter (ECSCF_*),IMS,0.99981,IMS,0.9999,"Break down ECSCF_SIP_SND_INV_420 by the peer, interface, component, or reporting dimension available in the counter output."
+3466,right in both,counter (ECSCF_*),IMS,0.9999,IMS,0.99992,"Break down ECSCF_SIP_SND_INV_421 by the peer, interface, component, or reporting dimension available in the counter output."
+3467,right in both,counter (ECSCF_*),IMS,0.99996,IMS,0.99985,"Break down ECSCF_SIP_SND_INV_480 by the peer, interface, component, or reporting dimension available in the counter output."
+3468,right in both,counter (ECSCF_*),IMS,0.99996,IMS,0.99987,"Break down ECSCF_SIP_SND_INV_483 by the peer, interface, component, or reporting dimension available in the counter output."
+3469,right in both,counter (ECSCF_*),IMS,0.99991,IMS,0.99991,"Break down ECSCF_SIP_SND_INV_486 by the peer, interface, component, or reporting dimension available in the counter output."
+3470,right in both,counter (ECSCF_*),IMS,0.9999,IMS,0.99991,"Break down ECSCF_SIP_SND_INV_488 by the peer, interface, component, or reporting dimension available in the counter output."
+3471,right in both,counter (ECSCF_*),IMS,0.99995,IMS,0.9999,"Break down ECSCF_SIP_SND_INV_501 by the peer, interface, component, or reporting dimension available in the counter output."
+3472,right in both,counter (ECSCF_*),IMS,0.99997,IMS,0.99986,"Break down ECSCF_SIP_SND_INV_503 by the peer, interface, component, or reporting dimension available in the counter output."
+3473,right in both,counter (ECSCF_*),IMS,0.99995,IMS,0.99988,"Break down ECSCF_SIP_SND_INV_505 by the peer, interface, component, or reporting dimension available in the counter output."
+3474,right in both,counter (ECSCF_*),IMS,0.99989,IMS,0.99988,"Break down ECSCF_SIP_SND_INV_513 by the peer, interface, component, or reporting dimension available in the counter output."
+3475,right in both,counter (ECSCF_*),IMS,0.99996,IMS,0.99987,"Break down ECSCF_SIP_SND_INV_600 by the peer, interface, component, or reporting dimension available in the counter output."
+3476,right in both,counter (ECSCF_*),IMS,0.99996,IMS,0.99991,"Break down ECSCF_SIP_SND_INV_604 by the peer, interface, component, or reporting dimension available in the counter output."
+3477,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_405 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3478,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INV_100 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3479,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_181 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3480,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INV_199 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3481,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,ECSCF_SIP_SND_INV_202 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3482,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_400 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3483,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_403 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3484,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_404 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3485,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_408 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3486,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_413 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3487,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_415 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3488,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_420 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3489,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INV_421 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3490,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,ECSCF_SIP_SND_INV_480 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3491,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_483 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3492,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INV_486 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3493,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_488 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3494,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INV_491 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3495,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_501 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3496,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_503 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3497,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INV_505 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3498,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_513 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3499,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_600 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3500,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INV_604 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3501,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_OPT_405 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3502,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,The ECSCF_SIP_SND_OPT_200 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3503,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_OPT_481 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3504,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_OPT_405 over the last 7 days and identify the intervals with the largest change.
+3505,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_OPT_200 over the last 7 days and identify the intervals with the largest change.
+3506,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_OPT_481 over the last 7 days and identify the intervals with the largest change.
+3507,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Compare ECSCF_SIP_SND_OPT_405 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3508,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Compare ECSCF_SIP_SND_OPT_200 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3509,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Compare ECSCF_SIP_SND_OPT_481 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3510,right in both,counter (ECSCF_*),IMS,0.99997,IMS,0.99994,"Break down ECSCF_SIP_SND_OPT_405 by the peer, interface, component, or reporting dimension available in the counter output."
+3511,right in both,counter (ECSCF_*),IMS,0.99998,IMS,0.99993,"Break down ECSCF_SIP_SND_OPT_200 by the peer, interface, component, or reporting dimension available in the counter output."
+3512,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_SND_OPT_481 by the peer, interface, component, or reporting dimension available in the counter output."
+3513,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_OPT_405 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3514,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_OPT_200 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3515,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_OPT_481 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3516,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INF_405 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3517,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INF_200 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3518,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INF_481 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3519,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_INF_405 over the last 7 days and identify the intervals with the largest change.
+3520,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_INF_200 over the last 7 days and identify the intervals with the largest change.
+3521,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Show a time-series trend for ECSCF_SIP_SND_INF_481 over the last 7 days and identify the intervals with the largest change.
+3522,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_SND_INF_405 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3523,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Compare ECSCF_SIP_SND_INF_200 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3524,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_SND_INF_481 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3525,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99993,"Break down ECSCF_SIP_SND_INF_405 by the peer, interface, component, or reporting dimension available in the counter output."
+3526,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99987,"Break down ECSCF_SIP_SND_INF_200 by the peer, interface, component, or reporting dimension available in the counter output."
+3527,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_SND_INF_481 by the peer, interface, component, or reporting dimension available in the counter output."
+3528,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,ECSCF_SIP_SND_INF_405 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3529,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INF_200 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3530,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,ECSCF_SIP_SND_INF_481 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3531,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_181 for the last 4 hours and return its collection interval and node scope.
+3532,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_199 for the last 24 hours and return its collection interval and node scope.
+3533,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_403 for the last 4 hours and return its collection interval and node scope.
+3534,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_404 for the last 24 hours and return its collection interval and node scope.
+3535,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_420 for the last 4 hours and return its collection interval and node scope.
+3536,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_421 for the last 24 hours and return its collection interval and node scope.
+3537,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_488 for the last 4 hours and return its collection interval and node scope.
+3538,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_491 for the last 24 hours and return its collection interval and node scope.
+3539,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_505 for the last 4 hours and return its collection interval and node scope.
+3540,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_1XX for the last 7 days and return its collection interval and node scope.
+3541,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_4XX for the last 7 days and return its collection interval and node scope.
+3542,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_INV_1XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3543,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_INV_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3544,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_INV_6XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3545,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,Show a time-series trend for ECSCF_SIP_SND_INV_1XX over the last 7 days and identify the intervals with the largest change.
+3546,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99987,Show a time-series trend for ECSCF_SIP_SND_INV_4XX over the last 7 days and identify the intervals with the largest change.
+3547,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,Show a time-series trend for ECSCF_SIP_SND_INV_6XX over the last 7 days and identify the intervals with the largest change.
+3548,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99981,Compare ECSCF_SIP_SND_INV_1XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3549,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99975,Compare ECSCF_SIP_SND_INV_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3550,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99981,Compare ECSCF_SIP_SND_INV_6XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3551,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99987,"Break down ECSCF_SIP_SND_INV_1XX by the peer, interface, component, or reporting dimension available in the counter output."
+3552,right in both,counter (ECSCF_*),IMS,0.99995,IMS,0.99984,"Break down ECSCF_SIP_SND_INV_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3553,right in both,counter (ECSCF_*),IMS,0.99986,IMS,0.99986,"Break down ECSCF_SIP_SND_INV_6XX by the peer, interface, component, or reporting dimension available in the counter output."
+3554,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_1XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3555,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,ECSCF_SIP_SND_INV_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3556,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_INV_6XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3557,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_202 for the last 15 minutes and return its collection interval and node scope.
+3558,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_413 for the last 15 minutes and return its collection interval and node scope.
+3559,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_483 for the last 15 minutes and return its collection interval and node scope.
+3560,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_501 for the last 15 minutes and return its collection interval and node scope.
+3561,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_604 for the last 15 minutes and return its collection interval and node scope.
+3562,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_408 for the last 7 days and return its collection interval and node scope.
+3563,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_480 for the last 7 days and return its collection interval and node scope.
+3564,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INV_600 for the last 7 days and return its collection interval and node scope.
+3565,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_100 for the last 4 hours and return its collection interval and node scope.
+3566,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_181 for the last 24 hours and return its collection interval and node scope.
+3567,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_400 for the last 4 hours and return its collection interval and node scope.
+3568,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_403 for the last 24 hours and return its collection interval and node scope.
+3569,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_414 for the last 4 hours and return its collection interval and node scope.
+3570,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_416 for the last 24 hours and return its collection interval and node scope.
+3571,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_484 for the last 4 hours and return its collection interval and node scope.
+3572,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_487 for the last 24 hours and return its collection interval and node scope.
+3573,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_502 for the last 4 hours and return its collection interval and node scope.
+3574,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_504 for the last 24 hours and return its collection interval and node scope.
+3575,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_606 for the last 4 hours and return its collection interval and node scope.
+3576,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_100 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3577,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_181 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3578,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_199 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3579,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_200 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3580,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_400 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3581,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_403 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3582,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_405 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3583,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_408 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3584,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_413 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3585,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_414 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3586,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_416 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3587,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_421 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3588,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_480 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3589,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_483 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3590,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_484 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3591,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_487 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3592,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_491 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3593,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_500 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3594,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_502 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3595,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_504 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3596,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_513 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3597,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_600 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3598,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_603 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3599,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_606 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3600,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_100 over the last 7 days and identify the intervals with the largest change.
+3601,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_181 over the last 7 days and identify the intervals with the largest change.
+3602,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_199 over the last 7 days and identify the intervals with the largest change.
+3603,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_200 over the last 7 days and identify the intervals with the largest change.
+3604,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_400 over the last 7 days and identify the intervals with the largest change.
+3605,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_403 over the last 7 days and identify the intervals with the largest change.
+3606,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_405 over the last 7 days and identify the intervals with the largest change.
+3607,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_408 over the last 7 days and identify the intervals with the largest change.
+3608,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_413 over the last 7 days and identify the intervals with the largest change.
+3609,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_414 over the last 7 days and identify the intervals with the largest change.
+3610,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_416 over the last 7 days and identify the intervals with the largest change.
+3611,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_421 over the last 7 days and identify the intervals with the largest change.
+3612,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,Show a time-series trend for ECSCF_SIP_RCV_INV_480 over the last 7 days and identify the intervals with the largest change.
+3613,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_483 over the last 7 days and identify the intervals with the largest change.
+3614,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_484 over the last 7 days and identify the intervals with the largest change.
+3615,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_487 over the last 7 days and identify the intervals with the largest change.
+3616,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_491 over the last 7 days and identify the intervals with the largest change.
+3617,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_500 over the last 7 days and identify the intervals with the largest change.
+3618,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_502 over the last 7 days and identify the intervals with the largest change.
+3619,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_504 over the last 7 days and identify the intervals with the largest change.
+3620,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_513 over the last 7 days and identify the intervals with the largest change.
+3621,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_600 over the last 7 days and identify the intervals with the largest change.
+3622,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_603 over the last 7 days and identify the intervals with the largest change.
+3623,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_606 over the last 7 days and identify the intervals with the largest change.
+3624,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_100 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3625,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_181 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3626,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_199 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3627,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_200 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3628,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_400 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3629,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_403 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3630,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_405 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3631,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_408 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3632,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_413 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3633,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_414 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3634,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_416 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3635,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_INV_421 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3636,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_480 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3637,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_483 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3638,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_484 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3639,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_487 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3640,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_491 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3641,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Compare ECSCF_SIP_RCV_INV_500 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3642,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_502 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3643,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_504 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3644,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_513 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3645,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INV_600 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3646,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_INV_603 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3647,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_INV_606 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3648,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_100 by the peer, interface, component, or reporting dimension available in the counter output."
+3649,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_181 by the peer, interface, component, or reporting dimension available in the counter output."
+3650,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_199 by the peer, interface, component, or reporting dimension available in the counter output."
+3651,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_200 by the peer, interface, component, or reporting dimension available in the counter output."
+3652,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_400 by the peer, interface, component, or reporting dimension available in the counter output."
+3653,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_403 by the peer, interface, component, or reporting dimension available in the counter output."
+3654,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_405 by the peer, interface, component, or reporting dimension available in the counter output."
+3655,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_408 by the peer, interface, component, or reporting dimension available in the counter output."
+3656,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_413 by the peer, interface, component, or reporting dimension available in the counter output."
+3657,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_414 by the peer, interface, component, or reporting dimension available in the counter output."
+3658,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_416 by the peer, interface, component, or reporting dimension available in the counter output."
+3659,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_421 by the peer, interface, component, or reporting dimension available in the counter output."
+3660,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_480 by the peer, interface, component, or reporting dimension available in the counter output."
+3661,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_483 by the peer, interface, component, or reporting dimension available in the counter output."
+3662,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_484 by the peer, interface, component, or reporting dimension available in the counter output."
+3663,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_487 by the peer, interface, component, or reporting dimension available in the counter output."
+3664,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_491 by the peer, interface, component, or reporting dimension available in the counter output."
+3665,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_500 by the peer, interface, component, or reporting dimension available in the counter output."
+3666,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_502 by the peer, interface, component, or reporting dimension available in the counter output."
+3667,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_504 by the peer, interface, component, or reporting dimension available in the counter output."
+3668,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_INV_513 by the peer, interface, component, or reporting dimension available in the counter output."
+3669,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_600 by the peer, interface, component, or reporting dimension available in the counter output."
+3670,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_603 by the peer, interface, component, or reporting dimension available in the counter output."
+3671,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_INV_606 by the peer, interface, component, or reporting dimension available in the counter output."
+3672,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_100 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3673,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_181 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3674,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_199 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3675,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_200 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3676,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_400 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3677,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_403 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3678,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_405 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3679,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_408 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3680,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_413 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3681,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_414 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3682,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_416 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3683,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_421 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3684,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_480 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3685,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_483 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3686,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_484 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3687,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_487 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3688,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_500 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3689,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_502 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3690,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_504 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3691,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_513 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3692,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_600 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3693,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_603 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3694,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_606 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3695,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_199 for the last 7 days and return its collection interval and node scope.
+3696,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_405 for the last 7 days and return its collection interval and node scope.
+3697,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_421 for the last 7 days and return its collection interval and node scope.
+3698,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_491 for the last 7 days and return its collection interval and node scope.
+3699,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_513 for the last 7 days and return its collection interval and node scope.
+3700,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_200 for the last 15 minutes and return its collection interval and node scope.
+3701,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_408 for the last 15 minutes and return its collection interval and node scope.
+3702,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_480 for the last 15 minutes and return its collection interval and node scope.
+3703,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_600 for the last 15 minutes and return its collection interval and node scope.
+3704,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_3XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3705,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INV_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3706,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INV_3XX over the last 7 days and identify the intervals with the largest change.
+3707,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,Show a time-series trend for ECSCF_SIP_RCV_INV_4XX over the last 7 days and identify the intervals with the largest change.
+3708,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_INV_3XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3709,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,Compare ECSCF_SIP_RCV_INV_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3710,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_RCV_INV_3XX by the peer, interface, component, or reporting dimension available in the counter output."
+3711,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_RCV_INV_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3712,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INV_3XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3713,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INV_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3714,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_413 for the last hour and return its collection interval and node scope.
+3715,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_483 for the last hour and return its collection interval and node scope.
+3716,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_500 for the last hour and return its collection interval and node scope.
+3717,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INV_603 for the last hour and return its collection interval and node scope.
+3718,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,The ECSCF_SIP_SND_CAN_3XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3719,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_CAN_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3720,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_CAN_6XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3721,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_CAN_3XX over the last 7 days and identify the intervals with the largest change.
+3722,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99987,Show a time-series trend for ECSCF_SIP_SND_CAN_4XX over the last 7 days and identify the intervals with the largest change.
+3723,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,Show a time-series trend for ECSCF_SIP_SND_CAN_6XX over the last 7 days and identify the intervals with the largest change.
+3724,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99982,Compare ECSCF_SIP_SND_CAN_3XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3725,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99977,Compare ECSCF_SIP_SND_CAN_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3726,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99983,Compare ECSCF_SIP_SND_CAN_6XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3727,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99988,"Break down ECSCF_SIP_SND_CAN_3XX by the peer, interface, component, or reporting dimension available in the counter output."
+3728,right in both,counter (ECSCF_*),IMS,0.99998,IMS,0.99986,"Break down ECSCF_SIP_SND_CAN_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3729,right in both,counter (ECSCF_*),IMS,0.99998,IMS,0.99987,"Break down ECSCF_SIP_SND_CAN_6XX by the peer, interface, component, or reporting dimension available in the counter output."
+3730,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,ECSCF_SIP_SND_CAN_3XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3731,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,ECSCF_SIP_SND_CAN_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3732,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,ECSCF_SIP_SND_CAN_6XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3733,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_CAN_4XX for the last 4 hours and return its collection interval and node scope.
+3734,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_CAN_6XX for the last 24 hours and return its collection interval and node scope.
+3735,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,The ECSCF_SIP_RCV_CAN_3XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3736,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_RCV_CAN_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3737,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_RCV_CAN_5XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3738,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,Show a time-series trend for ECSCF_SIP_RCV_CAN_3XX over the last 7 days and identify the intervals with the largest change.
+3739,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Show a time-series trend for ECSCF_SIP_RCV_CAN_4XX over the last 7 days and identify the intervals with the largest change.
+3740,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Show a time-series trend for ECSCF_SIP_RCV_CAN_5XX over the last 7 days and identify the intervals with the largest change.
+3741,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99977,Compare ECSCF_SIP_RCV_CAN_3XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3742,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99972,Compare ECSCF_SIP_RCV_CAN_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3743,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99967,Compare ECSCF_SIP_RCV_CAN_5XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3744,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,"Break down ECSCF_SIP_RCV_CAN_3XX by the peer, interface, component, or reporting dimension available in the counter output."
+3745,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99988,"Break down ECSCF_SIP_RCV_CAN_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3746,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99987,"Break down ECSCF_SIP_RCV_CAN_5XX by the peer, interface, component, or reporting dimension available in the counter output."
+3747,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_RCV_CAN_3XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3748,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_RCV_CAN_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3749,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_RCV_CAN_5XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3750,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_BYE_3XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3751,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,The ECSCF_SIP_SND_BYE_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3752,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,The ECSCF_SIP_SND_BYE_5XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3753,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,Show a time-series trend for ECSCF_SIP_SND_BYE_3XX over the last 7 days and identify the intervals with the largest change.
+3754,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99987,Show a time-series trend for ECSCF_SIP_SND_BYE_4XX over the last 7 days and identify the intervals with the largest change.
+3755,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99986,Show a time-series trend for ECSCF_SIP_SND_BYE_5XX over the last 7 days and identify the intervals with the largest change.
+3756,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99987,Compare ECSCF_SIP_SND_BYE_3XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3757,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99983,Compare ECSCF_SIP_SND_BYE_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3758,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99986,Compare ECSCF_SIP_SND_BYE_5XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3759,right in both,counter (ECSCF_*),IMS,0.99996,IMS,0.99986,"Break down ECSCF_SIP_SND_BYE_3XX by the peer, interface, component, or reporting dimension available in the counter output."
+3760,right in both,counter (ECSCF_*),IMS,0.99994,IMS,0.99985,"Break down ECSCF_SIP_SND_BYE_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3761,right in both,counter (ECSCF_*),IMS,0.99996,IMS,0.99987,"Break down ECSCF_SIP_SND_BYE_5XX by the peer, interface, component, or reporting dimension available in the counter output."
+3762,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,ECSCF_SIP_SND_BYE_3XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3763,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,ECSCF_SIP_SND_BYE_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3764,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,ECSCF_SIP_SND_BYE_5XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3765,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_BYE_200 for the last 4 hours and return its collection interval and node scope.
+3766,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_BYE_481 for the last 24 hours and return its collection interval and node scope.
+3767,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_BYE_200 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3768,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_BYE_481 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3769,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,Show a time-series trend for ECSCF_SIP_RCV_BYE_200 over the last 7 days and identify the intervals with the largest change.
+3770,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_BYE_481 over the last 7 days and identify the intervals with the largest change.
+3771,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_BYE_200 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3772,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_BYE_481 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3773,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99996,"Break down ECSCF_SIP_RCV_BYE_200 by the peer, interface, component, or reporting dimension available in the counter output."
+3774,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_BYE_481 by the peer, interface, component, or reporting dimension available in the counter output."
+3775,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_BYE_200 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3776,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_BYE_481 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3777,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,The ECSCF_SIP_RCV_BYE_5XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3778,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,The ECSCF_SIP_RCV_BYE_6XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3779,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,Show a time-series trend for ECSCF_SIP_RCV_BYE_5XX over the last 7 days and identify the intervals with the largest change.
+3780,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,Show a time-series trend for ECSCF_SIP_RCV_BYE_6XX over the last 7 days and identify the intervals with the largest change.
+3781,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_BYE_5XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3782,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_BYE_6XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3783,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_RCV_BYE_5XX by the peer, interface, component, or reporting dimension available in the counter output."
+3784,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_RCV_BYE_6XX by the peer, interface, component, or reporting dimension available in the counter output."
+3785,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_BYE_5XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3786,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_BYE_6XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3787,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INF_200 for the last 4 hours and return its collection interval and node scope.
+3788,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_INF_481 for the last 24 hours and return its collection interval and node scope.
+3789,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INF_5XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3790,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,The ECSCF_SIP_SND_INF_6XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3791,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_INF_5XX over the last 7 days and identify the intervals with the largest change.
+3792,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_INF_6XX over the last 7 days and identify the intervals with the largest change.
+3793,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99989,Compare ECSCF_SIP_SND_INF_5XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3794,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Compare ECSCF_SIP_SND_INF_6XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3795,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.9999,"Break down ECSCF_SIP_SND_INF_5XX by the peer, interface, component, or reporting dimension available in the counter output."
+3796,right in both,counter (ECSCF_*),IMS,0.99998,IMS,0.99988,"Break down ECSCF_SIP_SND_INF_6XX by the peer, interface, component, or reporting dimension available in the counter output."
+3797,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_INF_5XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3798,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,ECSCF_SIP_SND_INF_6XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3799,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INF_3XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3800,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INF_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3801,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_INF_6XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3802,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INF_3XX over the last 7 days and identify the intervals with the largest change.
+3803,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,Show a time-series trend for ECSCF_SIP_RCV_INF_4XX over the last 7 days and identify the intervals with the largest change.
+3804,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_INF_6XX over the last 7 days and identify the intervals with the largest change.
+3805,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INF_3XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3806,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Compare ECSCF_SIP_RCV_INF_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3807,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,Compare ECSCF_SIP_RCV_INF_6XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3808,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,"Break down ECSCF_SIP_RCV_INF_3XX by the peer, interface, component, or reporting dimension available in the counter output."
+3809,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99993,"Break down ECSCF_SIP_RCV_INF_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3810,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_RCV_INF_6XX by the peer, interface, component, or reporting dimension available in the counter output."
+3811,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_INF_3XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3812,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INF_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3813,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_INF_6XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3814,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INF_4XX for the last 4 hours and return its collection interval and node scope.
+3815,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_INF_6XX for the last 24 hours and return its collection interval and node scope.
+3816,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,The ECSCF_SIP_SND_PRA_3XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3817,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99992,The ECSCF_SIP_SND_PRA_4XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3818,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99993,The ECSCF_SIP_SND_PRA_6XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3819,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_PRA_3XX over the last 7 days and identify the intervals with the largest change.
+3820,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Show a time-series trend for ECSCF_SIP_SND_PRA_4XX over the last 7 days and identify the intervals with the largest change.
+3821,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99991,Show a time-series trend for ECSCF_SIP_SND_PRA_6XX over the last 7 days and identify the intervals with the largest change.
+3822,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,Compare ECSCF_SIP_SND_PRA_3XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3823,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99984,Compare ECSCF_SIP_SND_PRA_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3824,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99988,Compare ECSCF_SIP_SND_PRA_6XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3825,right in both,counter (ECSCF_*),IMS,0.99996,IMS,0.99992,"Break down ECSCF_SIP_SND_PRA_3XX by the peer, interface, component, or reporting dimension available in the counter output."
+3826,right in both,counter (ECSCF_*),IMS,0.9999,IMS,0.99991,"Break down ECSCF_SIP_SND_PRA_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3827,right in both,counter (ECSCF_*),IMS,0.99985,IMS,0.99992,"Break down ECSCF_SIP_SND_PRA_6XX by the peer, interface, component, or reporting dimension available in the counter output."
+3828,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,ECSCF_SIP_SND_PRA_3XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3829,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,ECSCF_SIP_SND_PRA_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3830,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,ECSCF_SIP_SND_PRA_6XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3831,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_PRA_4XX for the last 4 hours and return its collection interval and node scope.
+3832,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_SND_PRA_6XX for the last 24 hours and return its collection interval and node scope.
+3833,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_PRA_3XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3834,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_PRA_5XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3835,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_PRA_3XX over the last 7 days and identify the intervals with the largest change.
+3836,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_PRA_5XX over the last 7 days and identify the intervals with the largest change.
+3837,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_PRA_3XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3838,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_PRA_5XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3839,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_PRA_3XX by the peer, interface, component, or reporting dimension available in the counter output."
+3840,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_PRA_5XX by the peer, interface, component, or reporting dimension available in the counter output."
+3841,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_PRA_3XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3842,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_PRA_5XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3843,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_OPT_200 for the last 4 hours and return its collection interval and node scope.
+3844,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99999,Fetch the documented UAG performance counter ECSCF_SIP_RCV_OPT_481 for the last 24 hours and return its collection interval and node scope.
+3845,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_OPT_200 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3846,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_OPT_481 measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3847,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_OPT_200 over the last 7 days and identify the intervals with the largest change.
+3848,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_OPT_481 over the last 7 days and identify the intervals with the largest change.
+3849,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_OPT_200 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3850,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99995,Compare ECSCF_SIP_RCV_OPT_481 for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3851,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,"Break down ECSCF_SIP_RCV_OPT_200 by the peer, interface, component, or reporting dimension available in the counter output."
+3852,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,"Break down ECSCF_SIP_RCV_OPT_481 by the peer, interface, component, or reporting dimension available in the counter output."
+3853,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_OPT_200 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3854,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,ECSCF_SIP_RCV_OPT_481 changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3855,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,The ECSCF_SIP_RCV_OPT_6XX measurement looks abnormal; retrieve its recent value and determine whether the change is isolated or persistent.
+3856,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99996,Show a time-series trend for ECSCF_SIP_RCV_OPT_4XX over the last 7 days and identify the intervals with the largest change.
+3857,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99998,Show a time-series trend for ECSCF_SIP_RCV_OPT_6XX over the last 7 days and identify the intervals with the largest change.
+3858,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.9999,Compare ECSCF_SIP_RCV_OPT_4XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3859,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99994,Compare ECSCF_SIP_RCV_OPT_6XX for the current reporting interval with the previous matching interval; quantify the difference without assuming a threshold.
+3860,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99994,"Break down ECSCF_SIP_RCV_OPT_4XX by the peer, interface, component, or reporting dimension available in the counter output."
+3861,right in both,counter (ECSCF_*),IMS,0.99999,IMS,0.99995,"Break down ECSCF_SIP_RCV_OPT_6XX by the peer, interface, component, or reporting dimension available in the counter output."
+3862,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_OPT_4XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
+3863,right in both,counter (ECSCF_*),IMS,1.0,IMS,0.99997,ECSCF_SIP_RCV_OPT_6XX changed at the same time as service degradation; correlate its timestamp with related UAG counters and active alarms before assigning cause.
