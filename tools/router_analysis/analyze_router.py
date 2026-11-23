@@ -468,6 +468,50 @@ def main():
     json.dump({"input": str(inp), "sheet": sheet, "total": total, "right": n_right, "wrong": n_wrong, "error": n_err,
                "refs": {k: getattr(a, k) for k in ("ims", "mco", "mde", "eid", "kpi", "prev")}},
               open(out / "run_info.json", "w"), indent=2)
+
+    # ---------------- manager workbook: one formatted Excel file, one sheet per table
+    from openpyxl.styles import Alignment, Font, PatternFill
+    from openpyxl.utils import get_column_letter
+    step7_tab = None
+    if isinstance(locals().get("m"), pd.DataFrame) and "change" in m.columns:
+        step7_tab = pd.crosstab(m["group"], m["change"]).reset_index()
+    wrong_rows = allw[["Excel Row", "group", "picked", "Confidence", "subdomain", "template", "Query"]].rename(
+        columns={"picked": "picked worker", "Confidence": "confidence"}).sort_values(["group", "picked worker"])
+    sheets = [
+        ("1 Summary", s0.T.reset_index().set_axis(["metric", "value"], axis=1)),
+        ("2 Wrong by worker", byw),
+        ("3 Groups", g2),
+        ("4 Subdomains", sd),
+        ("5 Product words", t1),
+        ("6 Counter prefixes", pre.sort_values("wrong %", ascending=False)),
+        ("7 Query shape", t1c),
+        ("8 Keywords", kt),
+        ("9 Confidence", cw5),
+        ("10 Fallback thresholds", th),
+        ("11 Fixes ranked", fx),
+        ("12 Wrong rows", wrong_rows),
+        ("13 Error rows", err[[c for c in ("Excel Row", "Query", "Error") if c in err.columns]]),
+    ]
+    if isinstance(locals().get("ct"), pd.DataFrame):
+        sheets.append(("14 Counter ownership", ct))
+    if step7_tab is not None:
+        sheets.append(("15 vs previous run", step7_tab))
+    xlsx_path = out / f"{inp.stem}_manager_summary.xlsx"
+    head_fill, head_font = PatternFill("solid", fgColor="1F4E78"), Font(bold=True, color="FFFFFF")
+    with pd.ExcelWriter(xlsx_path, engine="openpyxl") as xw:
+        for name, d in sheets:
+            d.to_excel(xw, sheet_name=name[:31], index=False)
+            ws = xw.sheets[name[:31]]
+            for c in ws[1]:
+                c.fill, c.font = head_fill, head_font
+                c.alignment = Alignment(wrap_text=True, vertical="center")
+            for i, col in enumerate(d.columns, 1):
+                longest = max([len(str(col))] + [len(str(v)) for v in d[col].head(300)])
+                ws.column_dimensions[get_column_letter(i)].width = min(max(10, longest + 2), 80)
+            ws.freeze_panes = "A2"
+            if ws.max_row > 1:
+                ws.auto_filter.ref = ws.dimensions
+    print(f"manager workbook -> {xlsx_path}")
     print(f"OK total={total} right={n_right} wrong={n_wrong} error={n_err} -> {out}")
 
 if __name__ == "__main__":
